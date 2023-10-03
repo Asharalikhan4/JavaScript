@@ -1,0 +1,1 @@
+node --watch filename -> work same as nodemon
