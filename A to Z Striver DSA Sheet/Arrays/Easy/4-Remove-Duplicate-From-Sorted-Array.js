@@ -19,6 +19,6 @@ Explanation: After removing all the duplicates only one instance of 2 will remai
 const arr = [2, 2, 2, 2, 2];
 
 function removeDuplicate(arr){
-    
-    return {arr, len}
+    let i = 0;
+    for(let )
 }
