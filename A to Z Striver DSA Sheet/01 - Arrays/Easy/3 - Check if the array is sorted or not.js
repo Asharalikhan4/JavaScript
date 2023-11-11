@@ -1,16 +1,5 @@
-/*
+// https://practice.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=check-if-an-array-is-sorted
 
-Given an array arr[] of size N, check if it is sorted in non-decreasing order or not. 
-
-Input:
-N = 5
-arr[] = {10, 20, 30, 40, 50}
-
-Output: true
-
-Explanation: The given array is sorted.
-
-*/
 
 const arr = [1,2,3,4,5,6,7];
 
