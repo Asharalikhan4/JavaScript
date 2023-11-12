@@ -1,12 +1,12 @@
 // Sum of digits of a number 123 -> 1+2+3 = 6
 
 function sumOfDigits(num){
-    let sum = 0;
+    let answer = 0;
     while(num > 0){
-        sum += num%10;
-        num = Math.floor(num / 10);
+        answer += num%10;
+        num = Math.floor(num/10);   // We're doing Math.floor cause we only need the floor value.
     }
-    return sum;
-}
+    return answer;
+};
 
-console.log(sumOfDigits(1287));
+console.log(sumOfDigits(123));
