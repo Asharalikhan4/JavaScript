@@ -11,7 +11,7 @@ const adventurer = {
     },
 };
 
-console.log(adventurer.dog.name);   // this line will throw error
+// console.log(adventurer.dog.name);   // this line will throw error
 
 console.log(adventurer?.dog?.name);    // this line will give us undefined output.
 

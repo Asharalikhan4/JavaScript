@@ -1,6 +1,6 @@
 /*
 
-Spread opeartor is used to spread the value of the iterable's.
+Spread opeartor is used to spread the value of the iterable's. it takes out all the values.
 
 Important use case of spread operator -
 1. Shallow copies of array.

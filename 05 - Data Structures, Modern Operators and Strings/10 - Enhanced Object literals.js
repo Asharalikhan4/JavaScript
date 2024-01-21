@@ -1,0 +1,1 @@
+console.log(`this is an enhanced object literals, where you can do calculations in the object itself. for example: 2 + 4 = ${2+4} or anything you want.`)
