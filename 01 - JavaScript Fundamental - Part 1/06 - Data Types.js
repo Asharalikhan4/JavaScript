@@ -20,3 +20,8 @@ undefined
 null
 Symbol
 BigInt
+
+
+// Assignment
+let isIsland = true;
+console.log(typeof isIsland);
