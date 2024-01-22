@@ -20,26 +20,22 @@ const renderCountry = function(data, className = "") {
     countriesContainer.style.opacity = 1;
 };
 
-// const getCountryData = function(country) {
-//     // this is how we handle the fulfilled promise.
-//     fetch(`https://restcountries.com/v3.1/name/${country}`)
-//     .then(function(response) {
-//         console.log(response);
-//         return response.json();
-//     })
-//     .then(function(data) {
-//         console.log(data);
-//         renderCountry(data[0]);
-//     });
-// };
-
-// we can also write the above function in 
 const getCountryData = function(country) {
+  //  Country 1
     fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then((response) => response.json())
-    .then((data) => renderCountry(data[0]))
+    .then(data => {
+        renderCountry(data[0]);
+        const neighbour = data[0]?.borders[0];
+        if(!neighbour) return;
+        // Country 2
+        return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+    })
+    .then(response => response.json())
+    .then(data => renderCountry(data, "neighbour"))
 }
 
-getCountryData("portugal");
+getCountryData("germany");
 
-// Promises don't get rid of callback but it help us to get rid of call back hell.
+
+// Don't use the nested then method, that will same as the callback hell.

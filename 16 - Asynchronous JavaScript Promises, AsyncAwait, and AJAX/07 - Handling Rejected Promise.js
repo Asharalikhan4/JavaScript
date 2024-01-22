@@ -3,6 +3,11 @@
 const btn = document.querySelector(".btn-country");
 const countriesContainer = document.querySelector(".countries");
 
+const renderError = function(msg) {
+    countriesContainer.insertAdjacentText("beforehand", msg);
+    countriesContainer.style.opacity = 1;
+}
+
 const renderCountry = function(data, className = "") {
     const html = `
         <article class="country ${className}">
@@ -21,7 +26,25 @@ const renderCountry = function(data, className = "") {
 };
 
 const getCountryData = function(country) {
-  //  Country 1
+    //  Country 1
+    // fetch(`https://restcountries.com/v3.1/name/${country}`)
+    // .then((response) => response.json(),
+    //  err => alert(err)
+    //  )
+    // .then(data => {
+    //     renderCountry(data[0]);
+    //     const neighbour = data[0]?.borders[0];
+    //     if(!neighbour) return;
+    //     // Country 2
+    //     return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+    // })
+    // .then(response => response.json(),
+    //  err => alert(err)
+    //  )
+    // .then(data => renderCountry(data, "neighbour"))
+
+
+    // we can use the err to handle the error or we cn also use the catch to handle the error as like we did in code below.
     fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then((response) => response.json())
     .then(data => {
@@ -33,9 +56,17 @@ const getCountryData = function(country) {
     })
     .then(response => response.json())
     .then(data => renderCountry(data, "neighbour"))
+    .catch(err => {
+        console.error(err);
+        renderError(`Something went wrong ${err.message}. Try again!`)
+    })
+    .finally(() => {
+        // this callback funciton is going to be called everytime.
+        // stop showing spinner.
+        console.log("Finally block executed")
+    })
 }
 
-getCountryData("usa");
-
-
-// Don't use the nested then method, that will same as the callback hell.
+btn.addEventListener("click", function() {
+    getCountryData("portugal");
+});

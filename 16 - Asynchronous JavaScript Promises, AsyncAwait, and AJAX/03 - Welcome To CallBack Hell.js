@@ -4,6 +4,7 @@ const btn = document.querySelector(".btn-country");
 const countriesContainer = document.querySelector(".countries");
 
 const renderCountry = function(data, className = "") {
+    // here we are making request to get the data of a country then according to that data we are making another request to get the data of the neighbour country.
     const html = `
         <article class="country ${className}">
           <img class="country__img" src="${data?.flags?.png}" />
@@ -30,7 +31,6 @@ const getCountryAndNeighbour = function (country) {
 
     request.addEventListener("load", function () {
         const [ data ] = JSON.parse(this.responseText);
-        console.log(data);
 
         // Render Country
         renderCountry(data);
@@ -45,8 +45,6 @@ const getCountryAndNeighbour = function (country) {
 
         request2.addEventListener("load", function() {
             const [ data2 ] = JSON.parse(this.responseText);
-            console.log(data2);
-
             renderCountry(data2, "neighbour");
         });
     });
