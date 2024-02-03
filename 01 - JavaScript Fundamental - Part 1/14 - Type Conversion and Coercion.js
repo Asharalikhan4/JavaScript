@@ -15,6 +15,14 @@ console.log(typeof(num));
 let integerNum = parseInt(num);
 console.log(typeof(integerNum));
 
+let floatNum = parseFloat(num);
+console.log(typeof(floatNum));
+
+let booleanNum = Boolean(num);
+console.log(typeof(booleanNum));
+
+console.log("\n")
+
 /*
 
 Type Coercion:
