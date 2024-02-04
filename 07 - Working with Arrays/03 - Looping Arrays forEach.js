@@ -1,6 +1,7 @@
 /*
 
-The forEach() method of Array instances executes a provided function once for each array element.
+- The forEach() method of Array instances executes a provided function once for each array element.
+- continue and break statements are not allowed inside forEach(). or we can say they don't work inside forEach().
 
 */
 
