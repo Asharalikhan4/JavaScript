@@ -1,6 +1,3 @@
-// https://practice.geeksforgeeks.org/problems/largest-element-in-array4009/0
-
-
 const arr = [1,2,3,4,5,6,7,8];
 
 function largestNumber(arr){
