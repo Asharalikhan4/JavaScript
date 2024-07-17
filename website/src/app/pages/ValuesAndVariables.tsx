@@ -25,7 +25,7 @@ const ValuesAndVariables: FC = () => {
                 <CodeDisplay language="typescript" code={code} />
             </div>
             <div className="font-medium">Here,</div>
-            <div>- "Hello, world!" is the <span className="font-medium italic">value</span> (type String) and it's enclosed inside the quotation mark.</div>
+            <div>- &quot;Hello, world!&quot; is the <span className="font-medium italic">value</span> (type String) and it&apos;s enclosed inside the quotation mark.</div>
             <div>- greeting is the <span className="font-medium italic">variable</span> which is holding the value.</div>
         </div>
     );
