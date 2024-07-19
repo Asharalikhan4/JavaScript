@@ -10,11 +10,13 @@ interface Chapter {
 const chapterList: Chapter[] = [
     { name: "Values and Variables", url: "/values-and-variables" },
     { name: "Data Types", url: "/data-types" },
+    { name: "Async JavaScript", url: "/async-javascript" },
 ];
 
 const TableOfContent: FC = () => {
     return (
         <div className="space-y-2">
+            <Link href="/" className="text-blue-500 hover:underline">Back to Home</Link>
             <Heading name="Table of Content" />
             <ul className="space-y-1">
                 {chapterList?.map((chapter, index) => (
