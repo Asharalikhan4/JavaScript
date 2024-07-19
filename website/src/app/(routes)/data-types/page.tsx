@@ -1,4 +1,4 @@
-import DataTypes from "../pages/DataTypes";
+import DataTypes from "@/app/pages/DataTypes";
 
 export default function Page() {
     return <DataTypes />;

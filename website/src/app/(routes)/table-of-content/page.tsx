@@ -1,4 +1,4 @@
-import TableOfContent from "../pages/TableOfContent"
+import TableOfContent from "@/app/pages/TableOfContent"
 
 const page = () => {
     return (
