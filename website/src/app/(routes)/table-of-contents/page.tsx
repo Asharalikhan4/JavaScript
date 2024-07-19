@@ -1,4 +1,5 @@
 import TableOfContents from "@/app/pages/TableOfContents";
+import { title } from "process";
 import { FC } from "react";
 
 interface Topic {
@@ -47,16 +48,38 @@ const topics: Topic[] = [
         link: "/values-and-variables"
     },
     {
+        title: "Arrays",
+        link: "/arrays",
+        subtopics: [
+            {
+                title: "Filter",
+                link: "/arrays#filter",
+            },
+            {
+                title: "Find",
+                link: "/arrays#find",
+            },
+            {
+                title: "Map",
+                link: "/arrays#map",
+            }
+        ]
+    },
+    {
         title: "Async JavaScript",
         link: "/async-javascript",
         subtopics: [
             { 
-                title: "Subtopic 2.1",
-                link: "/async-javascript",
+                title: "AJAX",
+                link: "/async-javascript#ajax",
             },
             { 
-                title: "Subtopic 2.2",
-                link: "/async-javascript",
+                title: "API",
+                link: "/async-javascript#api",
+            },
+            {
+                title: "XMLHttpRequest",
+                link: "/async-javascript#xmlhttprequest",
             }
         ]
     }
