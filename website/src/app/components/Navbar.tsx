@@ -1,21 +1,14 @@
-"use client";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import ThemeToggle from "../utils/ThemeToggle";
 
 const Navbar: FC = () => {
-
-    const router = useRouter();
-
     return (
-        <nav className="flex justify-between items-center py-2 font-semibold border-2 border-cyan-500 p-4 rounded">
-            <Link href={"/"} className="cursor-pointer">Home</Link>
+        <nav className="flex flex-shrink-0 justify-between items-center py-2 px-4 font-medium border-2 border-[#005B41] dark:border-cyan-500 rounded-md">
+            <Link href={"/"} className="cursor-pointer hover:text-[#005B41] hover:dark:text-cyan-100">Home</Link>
             <div className="flex items-center gap-x-4">
-                <ThemeToggle />
-                <Link href={"/table-of-contents"} className="cursor-pointer">Contents</Link>
-                <div className="cursor-pointer" onClick={() => router.back()}>Prev</div>
-                <div className="cursor-pointer">Next</div>
+                <Link href={"/table-of-contents"} className="cursor-pointer hover:text-[#005B41] hover:dark:text-cyan-100">Contents</Link>
+                <ThemeToggle className="hover:text-[#005B41] hover:dark:text-cyan-100" />
             </div>
         </nav>
     );
