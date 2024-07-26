@@ -16,13 +16,19 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ topics }) => {
   const renderTopic = (topic: Topic, depth: number = 0) => {
     const indentClass = depth === 0 ? "" : `ml-${depth * 4}`;
     const textSizeClass = depth === 0 ? "text-lg font-semibold" : "text-base";
-    const textColorClass = depth === 0 ? "text-gray-800" : "text-gray-600";
+    const textColorClass = depth === 0 ? "text-gray-800 dark:text-violet-200" : "text-gray-600 dark:text-violet-100";
 
     return (
       <div key={topic.title} className={`ml-4 my-2`}>
         {/* <p>{indentClass}</p> */}
-        <Link href={topic.link} className={`${textSizeClass} ${textColorClass} hover:text-blue-600 transition-colors duration-200`}>
-          {topic?.title}
+        <Link href={topic.link} className={`${textSizeClass} ${textColorClass} hover:text-gray-950 dark:hover:text-violet-500 transition-colors duration-200 hover:underline`}>
+          {
+            depth === 0 ? (
+              <># {topic?.title}</>
+            ) : (
+              <>- {topic?.title}</>
+            )
+          }
         </Link>
         {topic?.subtopics && (
           <div className="mt-1">

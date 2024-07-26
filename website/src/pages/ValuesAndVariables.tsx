@@ -15,13 +15,6 @@ const ValuesAndVariables: FC = () => {
         <div className="space-y-2">
             <Heading name="Values and Variables" />
             <div>
-                {/* <h1 className="text-2xl font-bold mb-4">Code Display with Syntax Highlighting</h1>
-                <textarea
-                    className="w-full p-2 mb-4 bg-gray-800 text-white rounded-md"
-                    rows={6}
-                    value={code}
-                    onChange={handleCodeChange}
-                ></textarea> */}
                 <CodeDisplay language="typescript" code={code} />
             </div>
             <div className="font-medium">Here,</div>
