@@ -79,6 +79,24 @@ const topics: Topic[] = [
             {
                 title: "XMLHttpRequest",
                 link: "/async-javascript#xmlhttprequest",
+            },
+            {
+                title: "Promises",
+                link: "/async-javascript#promises",
+                subtopics: [
+                    {
+                        title: "Promises and Fetch Api",
+                        link: "/async-javascript#promises-and-fetch-api",
+                    },
+                    {
+                        title: "Consuming Promises",
+                        link: "/async-javascript#consuming-promises",
+                    },
+                    {
+                        title: "Chaining Promises",
+                        link: "/async-javascript#chaining-promises",
+                    }
+                ]
             }
         ]
     }
