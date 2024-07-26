@@ -26,7 +26,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ topics }) => {
         </Link>
         {topic.subtopics && (
           <div className="mt-1">
-            {topic.subtopics.map((subtopic) => renderTopic(subtopic, depth + 1))}
+            {topic?.subtopics?.map((subtopic) => renderTopic(subtopic, depth + 1))}
           </div>
         )}
       </div>
