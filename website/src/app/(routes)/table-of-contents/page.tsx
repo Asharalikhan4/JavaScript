@@ -1,6 +1,5 @@
-import TableOfContents from "@/app/pages/TableOfContents";
-import { title } from "process";
 import { FC } from "react";
+import TableOfContents from "@/pages/TableOfContents";
 
 interface Topic {
     title: string;

@@ -15,7 +15,7 @@ const ConsumingPromises: FC = () => {
     .catch((error) => console.error(error))
 };`} />
         <div>
-            <p>Promises don't resolve the callback problem but it helps in eliminating callback hell problem from our code.</p>
+            <p>Promises don&apos;t resolve the callback problem but it helps in eliminating callback hell problem from our code.</p>
         </div>
         </div>
     );

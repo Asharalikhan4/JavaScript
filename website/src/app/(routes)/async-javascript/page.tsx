@@ -1,8 +1,8 @@
 import { FC } from "react";
-import AsyncJavaScript from "@/app/pages/AsyncJavaScript/AsyncJavaScript";
-import Ajax from "@/app/pages/AsyncJavaScript/Ajax";
-import Api from "@/app/pages/AsyncJavaScript/Api";
-import XMLHttpRequest from "@/app/pages/AsyncJavaScript/XMLHttpRequest";
+import AsyncJavaScript from "@/pages/AsyncJavaScript/AsyncJavaScript";
+import Ajax from "@/pages/AsyncJavaScript/Ajax";
+import Api from "@/pages/AsyncJavaScript/Api";
+import XMLHttpRequest from "@/pages/AsyncJavaScript/XMLHttpRequest";
 
 const Page: FC = () => {
     return (
