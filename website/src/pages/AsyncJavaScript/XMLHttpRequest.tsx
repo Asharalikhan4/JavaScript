@@ -10,20 +10,20 @@ const XMLHttpRequest: FC = () => {
 const xhr = new XMLHttpRequest();
 
 // Configure it: GET-request for the URL /api/data
-xhr.open('GET', 'https://api.example.com/data', true);
+xhr.open("GET", "https://api.example.com/data", true);
 
 // Set the request headers if needed
-xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.setRequestHeader("Content-Type", "application/json");
 
 // Add an event listener for when the request is completed
 xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.status === 200) {
             // Successfully got the response
-            console.log('Response:', xhr.responseText);
+            console.log("Response:", xhr.responseText);
         } else {
             // There was a problem with the request
-            console.error('Error:', xhr.status, xhr.statusText);
+            console.error("Error:", xhr.status, xhr.statusText);
         }
     }
 };

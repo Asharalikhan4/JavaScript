@@ -1,5 +1,10 @@
-import ValuesAndVariables from "@/app/pages/ValuesAndVariables";
+import { FC } from "react";
+import ValuesAndVariables from "@/pages/ValuesAndVariables";
 
-export default function Page() {
-    return <ValuesAndVariables />;
+const Page: FC = () => {
+    return (
+        <ValuesAndVariables />
+    );
 };
+
+export default Page;

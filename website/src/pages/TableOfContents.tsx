@@ -14,9 +14,9 @@ interface TableOfContentsProps {
 
 const TableOfContents: React.FC<TableOfContentsProps> = ({ topics }) => {
   const renderTopic = (topic: Topic, depth: number = 0) => {
-    const indentClass = depth === 0 ? '' : `ml-${depth * 4}`;
-    const textSizeClass = depth === 0 ? 'text-lg font-semibold' : 'text-base';
-    const textColorClass = depth === 0 ? 'text-gray-800' : 'text-gray-600';
+    const indentClass = depth === 0 ? "" : `ml-${depth * 4}`;
+    const textSizeClass = depth === 0 ? "text-lg font-semibold" : "text-base";
+    const textColorClass = depth === 0 ? "text-gray-800" : "text-gray-600";
 
     return (
       <div key={topic.title} className={`ml-4 my-2`}>

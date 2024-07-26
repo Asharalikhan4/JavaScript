@@ -1,9 +1,10 @@
-import ArrayIntroduction from "@/app/pages/arrays/ArrayIntroduction"
-import Filter from "@/app/pages/arrays/Filter";
-import Find from "@/app/pages/arrays/Find";
-import Map from "@/app/pages/arrays/Map";
+import { FC } from "react";
+import ArrayIntroduction from "@/pages/arrays/ArrayIntroduction";
+import Filter from "@/pages/arrays/Filter";
+import Find from "@/pages/arrays/Find";
+import Map from "@/pages/arrays/Map";
 
-const Page = () => {
+const Page: FC = () => {
     return (
         <>
             <ArrayIntroduction />

@@ -1,5 +1,10 @@
-import DataTypes from "@/app/pages/DataTypes";
+import { FC } from "react";
+import DataTypes from "@/pages/DataTypes";
 
-export default function Page() {
-    return <DataTypes />;
+const Page: FC = () => {
+    return (
+        <DataTypes />
+    );
 };
+
+export default Page;
