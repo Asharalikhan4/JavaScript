@@ -5,7 +5,7 @@ import SubHeading from "@/components/SubHeading";
 const AsyncJavaScript = () => {
     return (
         <div className="space-y-2">
-            <Heading name="Async JavaScript" />
+            <Heading level={2} text="Async JavaScript" />
             <SubHeading name="Synchronous Code" />
             <div>
                 <p>- Synchronous code is executed line by line.</p>

@@ -40,12 +40,12 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ topics }) => {
   };
 
   return (
-    <nav className="p-6 rounded-lg">
-      <Heading name="Table of Contents" />
+    <div className="py-4">
+      <Heading level={2} text="Table of Contents" />
       <div>
         {topics?.map((topic) => renderTopic(topic))}
       </div>
-    </nav>
+    </div>
   );
 };
 

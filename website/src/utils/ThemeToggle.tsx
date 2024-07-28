@@ -29,9 +29,9 @@ const ThemeToggle: FC<ToggleThemeProps> = ({ className }) => {
 			<button onClick={() => setDarkTheme(!darkTheme)} className={`flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full dark:bg-gray-800`}>
                 {
                     darkTheme ? (
-                        <FaSun className={`text-gray-800 dark:text-gray-200 ${className}`} />
+                        <FaSun className={`${className}`} />
                     ) : (
-                        <FaMoon className={`text-gray-800 dark:text-gray-200 ${className}`} />
+                        <FaMoon className={`${className}`} />
                     )
                 }
             </button>

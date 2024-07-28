@@ -7,12 +7,12 @@ import { FC } from "react";
 const ArrayIntroduction: FC = () => {
     return (
         <div className="space-y-3">
-            <Heading name="Arrays" />
+            <Heading level={2} text="Array" />
             <div className="space-y-2">
                 <p>Objects allow you to store keyed collections of values. That’s fine.</p>
                 <p>But quite often we find that we need an ordered collection, where we have a 1st, a 2nd, a 3rd element and so on. For example, we need that to store a list of something: users, goods, HTML elements etc.</p>
                 <p>It is not convenient to use an object here, because it provides no methods to manage the order of elements. We can’t insert a new property “between” the existing ones. Objects are just not meant for such use.</p>
-                <p>There exists a special data structure named <CustomText text="Array" />, to store ordered collections.</p>
+                <p>There exists a special data structure named <CustomText>Array</CustomText>, to store ordered collections.</p>
             </div>
             <SubHeading name="Declaration" />
             <div className="space-y-2">

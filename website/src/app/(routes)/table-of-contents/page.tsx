@@ -1,5 +1,6 @@
 import { FC } from "react";
 import TableOfContents from "@/pages/TableOfContents";
+import { title } from "process";
 
 interface Topic {
     title: string;
@@ -13,38 +14,104 @@ interface TableOfContentsProps {
 
 const topics: Topic[] = [
     {
-        title: "Data Types",
-        link: "/data-types",
+        title: "Basics",
+        link: "/basics",
         subtopics: [
             {
-                title: "Subtopic 1.1",
-                link: "/async-javascript",
+                title: "Hello World",
+                link: "/basics#hello-world",
+            },
+            {
+                title: "Values and Variables",
+                link: "/basics#values-and-variables",
+            },
+            {
+                title: "Data Types",
+                link: "/basics#data-types",
+            },
+            {
+                title: "Comments",
+                link: "/basics#comments"
+            },
+            {
+                title: "typeof Operator",
+                link: "/basics#typeof-operator"
+            },
+            {
+                title: "Let, Const, Var",
+                link: "/basics#let-const-var",
                 subtopics: [
-                    { 
-                        title: "Subtopic 1.1.1",
-                        link: "/async-javascript",
-                        subtopics: [
-                            {
-                                title: "Subtopic",
-                                link: "/async-javascript",
-                            }
-                        ]
+                    {
+                        title: "Let",
+                        link: "/basics#let-const-var",
                     },
-                    { 
-                        title: "Subtopic 1.1.2",
-                        link: "/async-javascript",
+                    {
+                        title: "Const",
+                        link: "/basics#let-const-var",
+                    },
+                    {
+                        title: "Var",
+                        link: "/basics#let-const-var",
                     }
                 ]
             },
-            { 
-                title: "Subtopic 1.2",
-                link: "/async-javascript",
-            }
+            {
+                title: "Operators",
+                link: "/operators",
+            },
+            {
+                title: "String Literals",
+                link: "/basics#string-literals"
+            },
+            {
+                title: "If Else",
+                link: "/basics#if-else",
+            },
+            {
+                title: "Ternary Operator",
+                link: "/basics#ternary-operator",
+            },
+            {
+                title: "Type Conversion and Coercion",
+                link: "/basics#type-conversion-and-coercion",
+                subtopics: [
+                    {
+                        title: "Type Conversion",
+                        link: "/basics#type-conversion-and-coercion"
+                    },
+                    {
+                        title: "Type Coercion",
+                        link: "/basics#type-conversion-and-coercion"
+                    },
+                ]
+            },
+            {
+                title: "Truthy And Falsy Value",
+                link: "/basics#truthy-and-falsy-value"
+            },
+            {
+                title: "Equality Operator",
+                link: "/basics#equality-operator",
+                subtopics: [
+                    {
+                        title: "Equality Operator (==)",
+                        link: "/basics#equality-operator"
+                    },
+                    {
+                        title: "Strict Equality Operator (===)",
+                        link: "/basics#equality-operator"
+                    },
+                ]
+            },
+            {
+                title: "Switch Case",
+                link: "/basics#switch-case"
+            },
+            {
+                title: "Statement and Expression",
+                link: "/basics#statement-and-expression"
+            },
         ]
-    },
-    {
-        title: "Values and Variables",
-        link: "/values-and-variables"
     },
     {
         title: "Arrays",
@@ -104,7 +171,7 @@ const topics: Topic[] = [
 
 const page: FC = () => {
     return (
-        <div className="">
+        <div>
             <TableOfContents topics={topics} />
         </div>
     );
