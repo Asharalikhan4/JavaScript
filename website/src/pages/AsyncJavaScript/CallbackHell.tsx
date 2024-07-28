@@ -7,10 +7,10 @@ const CallbackHell = () => {
         <div>
             <SubHeading name="Callback Hell" />
             <div>
-                <p>- When we try to execute more then one async task in a sequence then <CustomText text="Callback Hell" /> occur.</p>
+                <p>- When we try to execute more then one async task in a sequence then <CustomText>Callback Hell</CustomText> occur.</p>
                 <p>- It makes your code hard to maintain and read.</p>
-                <p>- It is also known as <CustomText text="Pyramid of Doom" />.</p>
-                <p>- To avoid callback hell we can use <CustomText text="Promises" /> or <CustomText text="Async/Await" />.</p>
+                <p>- It is also known as <CustomText>Pyramid of Doom</CustomText>.</p>
+                <p>- To avoid callback hell we can use <CustomText>Promises</CustomText> or <CustomText>Async/Await</CustomText>.</p>
             </div>
             <CodeDisplay language="typescript" code={`setTimeout(() => {
     console.log("Task 1");
