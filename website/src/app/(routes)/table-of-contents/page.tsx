@@ -114,9 +114,31 @@ const topics: Topic[] = [
         ]
     },
     {
+        title: "Functions",
+        link: "/functions",
+        subtopics: [
+            {
+                title: "Function Declaration",
+                link: "/functions#function-declaration",
+            },
+            {
+                title: "Function Expression",
+                link: "/functions#function-expression",
+            },
+            {
+                title: "Arrow Function (ES6)",
+                link: "/functions#arrow-function",
+            }
+        ]
+    },
+    {
         title: "Arrays",
         link: "/arrays",
         subtopics: [
+            {
+                title: "Array Introduction",
+                link: "/arrays#array-introduction",
+            },
             {
                 title: "Filter",
                 link: "/arrays#filter",
@@ -162,7 +184,19 @@ const topics: Topic[] = [
                     {
                         title: "Chaining Promises",
                         link: "/async-javascript#chaining-promises",
-                    }
+                    },
+                    {
+                        title: "Handling Rejected Promises",
+                        link: "/async-javascript#handling-rejected-promises",
+                    },
+                    {
+                        title: "Building Promises",
+                        link: "/async-javascript#building-promises",
+                    },
+                    {
+                        title: "Comsuming Promises with Async Await",
+                        link: "/async-javascript#async-await",
+                    },
                 ]
             }
         ]

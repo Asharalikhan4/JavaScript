@@ -1,12 +1,13 @@
+import { FC } from "react";
 import CodeDisplay from "@/components/CodeDisplay";
 import Heading from "@/components/Heading";
 import SubHeading from "@/components/SubHeading";
+import CustomComponent from "@/components/CustomComponent";
 
-const AsyncJavaScript = () => {
+const AsyncJavaScript: FC = () => {
     return (
-        <div className="space-y-2">
-            <Heading level={2} text="Async JavaScript" />
-            <SubHeading name="Synchronous Code" />
+        <CustomComponent id="async-javascript">
+            <Heading level={3} text="Synchronous Code" />
             <div>
                 <p>- Synchronous code is executed line by line.</p>
                 <p>- Each line of code waits for previous line to finish.</p>
@@ -14,9 +15,9 @@ const AsyncJavaScript = () => {
             <CodeDisplay language="typescript" code={`// Synchronous code
 console.log("Hello");
 alert("Code blocked");  // Code will stop here until we press ok on the alert box.
-console.log("World");`} 
+console.log("World");`}
             />
-            <SubHeading name="Asynchronous Code" />
+            <Heading level={3} text="Asynchronous Code" />
             <div>
                 <p>- Asynchronous code is non-blocking code.</p>
                 <p>- Here setTimeout is will execute after 3 seconds but program will not wait for it. it will in background</p>
@@ -33,7 +34,7 @@ Ashar
 Khan
 Ali
 `} />
-        </div>
+        </CustomComponent>
     );
 };
 

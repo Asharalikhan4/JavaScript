@@ -1,11 +1,12 @@
-import CodeDisplay from "@/components/CodeDisplay";
-import SubHeading from "@/components/SubHeading";
 import { FC } from "react";
+import CodeDisplay from "@/components/CodeDisplay";
+import CustomComponent from "@/components/CustomComponent";
+import Heading from "@/components/Heading";
 
 const ConsumingPromises: FC = () => {
     return (
-        <div id="consumingPromises">
-            <SubHeading name="Consuming Promises" />
+        <CustomComponent id="consumingPromises">
+            <Heading level={3} text="Consuming Promises" />
             <CodeDisplay language="typescript" code={`const getData = function(input){
     fetch("url", {
         methods
@@ -17,7 +18,7 @@ const ConsumingPromises: FC = () => {
         <div>
             <p>Promises don&apos;t resolve the callback problem but it helps in eliminating callback hell problem from our code.</p>
         </div>
-        </div>
+        </CustomComponent>
     );
 };
 
