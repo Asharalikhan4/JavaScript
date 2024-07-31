@@ -1,11 +1,12 @@
 import CodeDisplay from "@/components/CodeDisplay";
+import CustomComponent from "@/components/CustomComponent";
 import CustomText from "@/components/CustomText";
-import SubHeading from "@/components/SubHeading"
+import Heading from "@/components/Heading";
 
 const CallbackHell = () => {
     return (
-        <div>
-            <SubHeading name="Callback Hell" />
+        <CustomComponent id="callback-hell">
+            <Heading level={3} text="Callback Hell" />
             <div>
                 <p>- When we try to execute more then one async task in a sequence then <CustomText>Callback Hell</CustomText> occur.</p>
                 <p>- It makes your code hard to maintain and read.</p>
@@ -21,7 +22,7 @@ const CallbackHell = () => {
         }, 1000);
     }, 1000);
 }, 1000);`} />
-        </div>
+        </CustomComponent>
     );
 };
 

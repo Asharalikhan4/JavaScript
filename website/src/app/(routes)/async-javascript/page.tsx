@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Heading from "@/components/Heading";
 import AsyncJavaScript from "@/pages/AsyncJavaScript/AsyncJavaScript";
 import Ajax from "@/pages/AsyncJavaScript/Ajax";
 import Api from "@/pages/AsyncJavaScript/Api";
@@ -9,10 +10,16 @@ import Promises from "@/pages/AsyncJavaScript/Promises";
 import PromisesAndFetchApi from "@/pages/AsyncJavaScript/PromisesAndFetchApi";
 import ConsumingPromises from "@/pages/AsyncJavaScript/ConsumingPromises";
 import ChainingPromises from "@/pages/AsyncJavaScript/ChainingPromises";
+import CustomPage from "@/components/CustomPage";
+import HandlingRejectedPromises from "@/pages/AsyncJavaScript/HandlingRejectedPromises";
+import BuildingPromises from "@/pages/AsyncJavaScript/BuildingPromises";
+import AsyncAwait from "@/pages/AsyncJavaScript/AsyncAwait";
+import ErrorHandlingWithTryCatchFinally from "@/pages/AsyncJavaScript/ErrorHandlingWithTryCatchFinally";
 
 const Page: FC = () => {
     return (
-        <section className="space-y-8">
+        <CustomPage>
+            <Heading level={2} text="Async JavaScript" />
             <AsyncJavaScript />
             <Ajax />
             <Api />
@@ -23,7 +30,11 @@ const Page: FC = () => {
             <PromisesAndFetchApi />
             <ConsumingPromises />
             <ChainingPromises />
-        </section>
+            <HandlingRejectedPromises />
+            <BuildingPromises />
+            <AsyncAwait />
+            <ErrorHandlingWithTryCatchFinally />
+        </CustomPage>
     );
 };
 

@@ -8,6 +8,8 @@ const Navbar: FC = () => {
             <Link href={"/"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Home</Link>
             <div className="flex items-center gap-x-4 px-1">
                 <Link href={"/table-of-contents"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Contents</Link>
+                <Link href={"/compiler"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Compiler</Link>
+                <Link href={"/contact-us"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Contact-Us</Link>
                 <ThemeToggle className="transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300 text-2xl" />
             </div>
         </nav>

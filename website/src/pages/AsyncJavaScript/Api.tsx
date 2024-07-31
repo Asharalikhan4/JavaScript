@@ -1,12 +1,13 @@
-import SubHeading from "@/components/SubHeading";
 import { FC } from "react";
+import CustomComponent from "@/components/CustomComponent";
+import Heading from "@/components/Heading";
 
 const Api: FC = () => {
     return (
-        <div id="api">
-            <SubHeading name="API (Application Programming Interface)" />
+        <CustomComponent id="api">
+            <Heading level={3} text="API (Application Programming Interface)" />
             <p></p>
-        </div>
+        </CustomComponent>
     );
 };
 

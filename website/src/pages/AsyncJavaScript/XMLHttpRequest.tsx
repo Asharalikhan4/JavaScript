@@ -1,11 +1,12 @@
-import CodeDisplay from "@/components/CodeDisplay";
-import SubHeading from "@/components/SubHeading";
 import { FC } from "react";
+import CodeDisplay from "@/components/CodeDisplay";
+import CustomComponent from "@/components/CustomComponent";
+import Heading from "@/components/Heading";
 
 const XMLHttpRequest: FC = () => {
     return (
-        <div id="xmlhttprequest">
-            <SubHeading name="Our first AJAX Call (XMLHttpRequest)" />
+        <CustomComponent id="xmlhttprequest">
+            <Heading level={3} text="XMLHttpRequest" />
             <CodeDisplay language="typescript" code={`// Create a new XMLHttpRequest object
 const xhr = new XMLHttpRequest();
 
@@ -30,7 +31,7 @@ xhr.onreadystatechange = function () {
 
 // Send the request
 xhr.send();`} />
-        </div>
+        </CustomComponent>
     );
 };
 
