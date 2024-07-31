@@ -8,15 +8,10 @@ import { IoMdClose } from "react-icons/io";
 const Navbar: FC = () => {
 
     const [mobileMenu, setMobileMenu] = useState<boolean>(false);
-    const [theme, setTheme] = useState<string | null>(localStorage.getItem("theme"));
 
     const handleToggleMobileMenu = () => {
         setMobileMenu(!mobileMenu);
     };
-
-    useEffect(() => {
-        setTheme(localStorage.getItem("theme"));
-    }, [theme]);
 
     return (
         <nav className="border-2 border-[#005B41] dark:border-violet-500 rounded-md">
@@ -34,10 +29,11 @@ const Navbar: FC = () => {
             {
                 mobileMenu ? (
                     <div className="relative h-px md:hidden my-1">
-                        <div className={`absolute inset-0 bg-gradient-to-r ${theme === 'dark'
+                        {/* <div className={`absolute inset-0 bg-gradient-to-r ${theme === 'dark'
                                 ? 'from-transparent via-violet-500 to-transparent'
                                 : 'from-transparent via-[#005B41] to-transparent'
-                            }`}></div>
+                            }`}></div> */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-violet-500 to-transparent"></div>
                     </div>
                 ) : (
                     <></>
