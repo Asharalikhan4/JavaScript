@@ -1,20 +1,20 @@
 import { FC } from "react";
-import Heading from "@/components/Heading";
-import AsyncJavaScript from "@/pages/AsyncJavaScript/AsyncJavaScript";
-import Ajax from "@/pages/AsyncJavaScript/Ajax";
-import Api from "@/pages/AsyncJavaScript/Api";
-import XMLHttpRequest from "@/pages/AsyncJavaScript/XMLHttpRequest";
-import CallbackFunction from "@/pages/AsyncJavaScript/CallbackFunction";
-import CallbackHell from "@/pages/AsyncJavaScript/CallbackHell";
-import Promises from "@/pages/AsyncJavaScript/Promises";
-import PromisesAndFetchApi from "@/pages/AsyncJavaScript/PromisesAndFetchApi";
-import ConsumingPromises from "@/pages/AsyncJavaScript/ConsumingPromises";
-import ChainingPromises from "@/pages/AsyncJavaScript/ChainingPromises";
-import CustomPage from "@/components/CustomPage";
-import HandlingRejectedPromises from "@/pages/AsyncJavaScript/HandlingRejectedPromises";
-import BuildingPromises from "@/pages/AsyncJavaScript/BuildingPromises";
-import AsyncAwait from "@/pages/AsyncJavaScript/AsyncAwait";
-import ErrorHandlingWithTryCatchFinally from "@/pages/AsyncJavaScript/ErrorHandlingWithTryCatchFinally";
+import CustomPage from "@/components/common/CustomPage";
+import Heading from "@/components/common/Heading";
+import AsyncJavaScript from "@/components/docs/AsyncJavaScript/AsyncJavaScript";
+import Ajax from "@/components/docs/AsyncJavaScript/Ajax";
+import Api from "@/components/docs/AsyncJavaScript/Api";
+import XMLHttpRequest from "@/components/docs/AsyncJavaScript/XMLHttpRequest";
+import CallbackFunction from "@/components/docs/AsyncJavaScript/CallbackFunction";
+import CallbackHell from "@/components/docs/AsyncJavaScript/CallbackHell";
+import Promises from "@/components/docs/AsyncJavaScript/Promises";
+import PromisesAndFetchApi from "@/components/docs/AsyncJavaScript/PromisesAndFetchApi";
+import ConsumingPromises from "@/components/docs/AsyncJavaScript/ConsumingPromises";
+import ChainingPromises from "@/components/docs/AsyncJavaScript/ChainingPromises";
+import HandlingRejectedPromises from "@/components/docs/AsyncJavaScript/HandlingRejectedPromises";
+import BuildingPromises from "@/components/docs/AsyncJavaScript/BuildingPromises";
+import AsyncAwait from "@/components/docs/AsyncJavaScript/AsyncAwait";
+import ErrorHandlingWithTryCatchFinally from "@/components/docs/AsyncJavaScript/ErrorHandlingWithTryCatchFinally";
 
 const Page: FC = () => {
     return (

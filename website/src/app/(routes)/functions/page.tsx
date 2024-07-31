@@ -1,12 +1,12 @@
 import { FC } from "react";
 import dynamic from "next/dynamic";
-import CustomPage from "@/components/CustomPage";
-import Heading from "@/components/Heading";
-import FunctionDeclaration from "@/pages/Functions/FunctionDeclaration";
-import FunctionExpression from "@/pages/Functions/FunctionExpression";
-import ArrowFunction from "@/pages/Functions/ArrowFunction";
+import CustomPage from "@/components/common/CustomPage";
+import Heading from "@/components/common/Heading";
+import FunctionDeclaration from "@/components/docs/Functions/FunctionDeclaration";
+import FunctionExpression from "@/components/docs/Functions/FunctionExpression";
+import ArrowFunction from "@/components/docs/Functions/ArrowFunction";
 
-const FunctionsIntroduction = dynamic(() => import("@/pages/Functions/FunctionsIntroduction"));
+const FunctionsIntroduction = dynamic(() => import("@/components/docs/Functions/FunctionsIntroduction"));
 
 const Page: FC = () => {
     return (
