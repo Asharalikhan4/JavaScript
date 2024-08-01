@@ -46,7 +46,7 @@ const Navbar: FC = () => {
                     <Link href={"/contact-us"} className="block cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300" onClick={handleToggleMobileMenu}>Contact-Us</Link>
                 </div>
             )}
-            <div className="hidden md:flex justify-between items-center font-medium md:px-4 md:py-4 px-2 py-3">
+            <div className="hidden md:flex justify-between items-center font-medium px-3 py-3">
                 <Link href={"/"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Home</Link>
                 <div className="flex items-center gap-x-4 px-1">
                     <Link href={"/table-of-contents"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Contents</Link>
