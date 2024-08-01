@@ -1,4 +1,5 @@
-import { FC } from "react";
+"use client";
+import { FC, useEffect, useState } from "react";
 import CustomPage from "@/components/common/CustomPage";
 import Heading from "@/components/common/Heading";
 import AsyncJavaScript from "@/components/docs/AsyncJavaScript/AsyncJavaScript";
@@ -15,8 +16,29 @@ import HandlingRejectedPromises from "@/components/docs/AsyncJavaScript/Handling
 import BuildingPromises from "@/components/docs/AsyncJavaScript/BuildingPromises";
 import AsyncAwait from "@/components/docs/AsyncJavaScript/AsyncAwait";
 import ErrorHandlingWithTryCatchFinally from "@/components/docs/AsyncJavaScript/ErrorHandlingWithTryCatchFinally";
+import ShimmerEffect from "@/components/common/ShimmerEffect";
 
 const Page: FC = () => {
+
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+
+    useEffect(() => {
+        // Simulate loading delay
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (isLoading) {
+        return (
+            <div className="container mx-auto px-4 py-8">
+                <ShimmerEffect />
+            </div>
+        );
+    }
+
     return (
         <CustomPage>
             <Heading level={2} text="Async JavaScript" />
