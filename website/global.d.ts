@@ -33,3 +33,28 @@ interface CustomComponentProps {
     className?: string;
     id: string;
 };
+
+interface CustomInputProps {
+    name: string;
+    type: string;
+    placeholder: string;
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    className?: string;
+};
+
+interface CustomTextAreaPropsTypes {
+    name: string;
+    placeholder: string;
+    className?: string;
+    rows?: number;
+    cols?: number;
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+};
+
+interface ContactFormTypes {
+    name: string;
+    email: string;
+    suggestions: string;
+};
