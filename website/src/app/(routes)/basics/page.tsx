@@ -3,8 +3,6 @@ import { DynamicImport } from "@/utils/DynamicImport";
 import CustomPage from "@/components/common/CustomPage";
 import Heading from "@/components/common/Heading";
 
-// const CustomPage = DynamicImport(() => import("@/components/CustomPage"));
-// const Heading = DynamicImport(() => import("@/components/Heading"));
 const HelloWorld = DynamicImport(() => import("@/components/docs/basics/HelloWorld"));
 const ValuesAndVariables = DynamicImport(() => import("@/components/docs/basics/ValuesAndVariables"));
 const DataTypes = DynamicImport(() => import("@/components/docs/basics/DataTypes"));
