@@ -2,7 +2,7 @@ import { FC } from "react";
 import CustomPage from "@/components/common/CustomPage";
 import Heading from "@/components/common/Heading";
 
-const page: FC = () => {
+const Page: FC = () => {
     return (
         <CustomPage>
             <Heading level={1} text="Compiler" />
@@ -11,4 +11,4 @@ const page: FC = () => {
     );
 };
 
-export default page;
+export default Page;

@@ -14,7 +14,7 @@ const Navbar: FC = () => {
     };
 
     return (
-        <nav className="sticky top-5 bg-white dark:bg-black mb-2 border-2 border-[#005B41] dark:border-violet-500 rounded-md">
+        <nav className="bg-white dark:bg-black mb-2 border-2 border-[#005B41] dark:border-violet-500 rounded-md">
             <div className="px-2 py-1 flex items-center justify-between md:hidden">
                 <Link href={"/"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Home</Link>
                 <div className="flex items-center space-x-2">

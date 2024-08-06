@@ -3,7 +3,7 @@ import CustomComponent from "@/components/common/CustomComponent";
 import Heading from "@/components/common/Heading";
 import CodeDisplay from "@/components/common/CodeDisplay";
 
-const HelloWorld: FC<PageProps> = ({ ashar }) => {
+const HelloWorld: FC = () => {
     return (
         <CustomComponent id="hello-world">
             <Heading level={3} text="Hello, World!" />
