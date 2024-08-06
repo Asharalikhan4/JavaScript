@@ -202,7 +202,7 @@ const topics: Topic[] = [
     }
 ];
 
-const page: FC = () => {
+const Page: FC = () => {
     return (
         <div>
             <TableOfContents topics={topics} />
@@ -210,4 +210,4 @@ const page: FC = () => {
     );
 };
 
-export default page;
+export default Page;

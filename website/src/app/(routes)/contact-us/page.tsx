@@ -5,7 +5,7 @@ import Heading from "@/components/common/Heading";
 import CustomInput from "@/components/common/CustomInput";
 import CustomTextArea from "@/components/common/CustomTextArea";
 
-const page: FC = () => {
+const Page: FC = () => {
 
     const [contactForm, setContactForm] = useState<ContactFormTypes>({
         name: "",
@@ -40,8 +40,14 @@ const page: FC = () => {
                 <CustomTextArea name="suggestions" placeholder="Your Suggestions..." value={contactForm?.suggestions} onChange={handleInputChange} rows={10} cols={50} className="p-2" />
                 <button type="submit" onClick={handleContactFormSubmit} className="p-2 bg-[#005B41] dark:bg-violet-500 text-white rounded-md dark:text-black">Submit</button>
             </form>
+            <div className="flex items-center my-4">
+                <div className="flex-grow border-t border-violet-500"></div>
+                <span className="mx-2 text-violet-300">OR</span>
+                <div className="flex-grow border-t border-violet-500"></div>
+            </div>
+            <div className="text-xl font-medium">Write a mail - <a href="mailto:contactashar4@gmail.com" className="dark:text-violet-200 dark:hover:text-violet-400 underline underline-offset-4">contactashar4@gmail.com</a></div>
         </CustomPage>
     );
 };
 
-export default page;
+export default Page;
