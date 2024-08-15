@@ -3,6 +3,10 @@
 - [Official NodeJS Site](https://nodejs.org/en)
 - [NodeJS Github](https://github.com/nodejs/node)
 - NodeJS is a **JavaScript Runtime built on chrome V8 javascript engine**.
+- In other words NodeJS is built on top of **Chrome V8 Java Script Engine** which is known for high performance and efficient execution of JS Code.
+- Node JS is cross platform means it can run on windows, linux and also on other platforms.
+- Node JS is Open source and it is maintained by Open JS Foundation.
+- Node JS executes JavaScript outside the web browser.
 - Node.js has an **event-driven architecture** and is capable of **asynchronous I/O (non-blocking I/O)**.
 - Node.js was built by **Ryan Dahl in 2009**.
 
