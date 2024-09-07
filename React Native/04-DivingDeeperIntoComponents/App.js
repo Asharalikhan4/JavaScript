@@ -1,12 +1,28 @@
 import { StyleSheet, ImageBackground, SafeAreaView } from 'react-native';
 import { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
+// install the custom font. 
+import { useFonts } from "epxo-font";
+import AppLoading from "expo-app-loading";
+
 import GameStartScreen from './screens/StartGameScreen';
 import GameScreen from './screens/GameScreen';
 import Colors from './constants/colors';
 import GameOverScreen from './screens/GameOverScreen';
 
 export default function App() {
+
+  const [fontsLoaded] = useFonts({
+    // check font documentation on expo.
+    "opan-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
+    "opan-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
+  });
+
+  if(!fontsLoaded){
+    <AppLoading />
+  };
+
+  // we show laoding screen while the fonts are loaded for that we can use a expo package called expo install expo-app-loading
 
   const [userNumber, setUserNumber] = useState();
   const [gameIsOver, setIsGameOver] = useState(true);
