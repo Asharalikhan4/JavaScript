@@ -7,7 +7,7 @@ import CustomText from "@/components/common/CustomText";
 const Comments: FC = () => {
     return (
         <CustomComponent id="comments">
-            <Heading level={3} text="Comments" />
+            <Heading level={3} text="1.4 - Comments" />
             <CodeDisplay language="javascript" code={`// Single line comment
 /* double line
 comment */`} />

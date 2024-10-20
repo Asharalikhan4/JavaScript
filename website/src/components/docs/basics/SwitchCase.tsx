@@ -7,7 +7,7 @@ import CustomText from "@/components/common/CustomText";
 const SwitchCase: FC = () => {
     return (
         <CustomComponent id="switch-case">
-            <Heading level={3} text="Switch Case" />
+            <Heading level={3} text="1.14 - Switch Case" />
             <CodeDisplay language="typescript" code={`const day = "monday";
 
 switch(day){

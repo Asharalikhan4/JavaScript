@@ -7,7 +7,7 @@ import CustomText from "@/components/common/CustomText";
 const ValuesAndVariables: FC = () => {
     return (
         <CustomComponent id="values-and-variables">
-            <Heading level={3} text="Values and Variables" />
+            <Heading level={3} text="1.2 - Values and Variables" />
             <p>- Variable name can only contain letter, number, dollar sign and underscore.</p>
             <div>
                 <CodeDisplay language="typescript" code={`const greeting = 'Hello, world!';`} />

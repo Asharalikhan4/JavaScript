@@ -7,7 +7,7 @@ import CustomText from "@/components/common/CustomText";
 const StringLiterals: FC = () => {
     return (
         <CustomComponent id="string-literals">
-            <Heading level={3} text="String Literals" />
+            <Heading level={3} text="1.8 - String Literals" />
             <CodeDisplay language="javascript" code={`const firstName = "Ashar;
 const birthYear = 1991;
 const year = 2024;

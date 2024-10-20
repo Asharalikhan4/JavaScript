@@ -7,7 +7,7 @@ import CustomText from "@/components/common/CustomText";
 const DataTypes: FC = () => {
     return (
         <CustomComponent id="data-types">
-            <Heading level={3} text="Data Types" />
+            <Heading level={3} text="1.3 - Data Types" />
             <p>- There are 8 primitive data types in JavaScript.</p>
             <ul className="list-decimal list-inside space-y-1">
                 <li>
