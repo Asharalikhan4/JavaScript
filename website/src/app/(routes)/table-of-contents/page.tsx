@@ -59,7 +59,7 @@ const topics: Topic[] = [
                 link: "/operators",
             },
             {
-                title: "String Literals",
+                title: "String and Template Literals",
                 link: "/basics#string-literals"
             },
             {
@@ -108,8 +108,22 @@ const topics: Topic[] = [
             },
             {
                 title: "Statement and Expression",
-                link: "/basics#statement-and-expression"
+                link: "/basics#statement-and-expression",
+                subtopics: [
+                    {
+                        title: "Statement",
+                        link: "/basics#statement-and-expression"
+                    },
+                    {
+                        title: "Expression",
+                        link: "/basics#statement-and-expression"
+                    },
+                ]
             },
+            {
+                title: "Strict Mode",
+                link: "/basics#strict-mode"
+            }
         ]
     },
     {

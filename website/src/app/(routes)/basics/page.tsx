@@ -18,11 +18,12 @@ const TruthyAndFalsyValue = DynamicImport(() => import("@/components/docs/basics
 const EqualityOperator = DynamicImport(() => import("@/components/docs/basics/EqualityOperator"));
 const SwitchCase = DynamicImport(() => import("@/components/docs/basics/SwitchCase"));
 const StatementAndExpression = DynamicImport(() => import("@/components/docs/basics/StatementAndExpression"));
+const StrictMode = DynamicImport(() => import("@/components/docs/basics/StrictMode"));
 
 const Page: FC = () => {
     return (
         <CustomPage>
-            <Heading level={2} text="Basics" />
+            <Heading level={2} text="#1 - Basics" />
             <HelloWorld />
             <ValuesAndVariables />
             <DataTypes />
@@ -38,6 +39,7 @@ const Page: FC = () => {
             <EqualityOperator />
             <SwitchCase />
             <StatementAndExpression />
+            <StrictMode />
         </CustomPage>
     );
 };

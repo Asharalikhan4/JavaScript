@@ -6,7 +6,7 @@ import CodeDisplay from "@/components/common/CodeDisplay";
 const HelloWorld: FC = () => {
     return (
         <CustomComponent id="hello-world">
-            <Heading level={3} text="Hello, World!" />
+            <Heading level={3} text="1.1 - Hello, World!" />
             <CodeDisplay language="javascript" code={`console.log("Hello, World!");`} />
         </CustomComponent>
     );

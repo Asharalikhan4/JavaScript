@@ -7,7 +7,7 @@ import CustomText from "@/components/common/CustomText";
 const TypeOfOperator: FC = () => {
     return (
         <CustomComponent id="typeof-operator">
-            <Heading level={3} text="typeof Operator" />
+            <Heading level={3} text="1.5 - typeof Operator" />
             <p><CustomText>typeof</CustomText> is a operator which tell the type of variable.</p>
             <CodeDisplay language="javascript" code={`let car = "Mustang";
 console.log(typeof car) or console.log(typeof(car));
