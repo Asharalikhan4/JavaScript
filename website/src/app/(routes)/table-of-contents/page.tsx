@@ -110,6 +110,10 @@ const topics: Topic[] = [
                 title: "Statement and Expression",
                 link: "/basics#statement-and-expression"
             },
+            {
+                title: "Strict Mode",
+                link: "/basics#strict-mode"
+            }
         ]
     },
     {
@@ -139,16 +143,30 @@ const topics: Topic[] = [
                 link: "/arrays#array-introduction",
             },
             {
-                title: "Filter",
-                link: "/arrays#filter",
-            },
-            {
-                title: "Find",
-                link: "/arrays#find",
-            },
-            {
-                title: "Map",
-                link: "/arrays#map",
+                title: "Array Methods",
+                link: "/arrays#array-methods",
+                subtopics: [
+                    {
+                        title: "At",
+                        link: "/arrays#at",
+                    },
+                    {
+                        title: "Filter",
+                        link: "/arrays#filter",
+                    },
+                    {
+                        title: "Find",
+                        link: "/arrays#find",
+                    },
+                    {
+                        title: "Map",
+                        link: "/arrays#map",
+                    },
+                    {
+                        title: "Some",
+                        link: "/arrays#some",
+                    }
+                ]
             }
         ]
     },

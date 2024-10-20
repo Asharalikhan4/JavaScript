@@ -7,8 +7,8 @@ import CustomText from "@/components/common/CustomText";
 const Find: FC = () => {
     return (
         <CustomComponent id="find">
-            <Heading level={2} text="find" />
-            <p><CustomText>find</CustomText> method returns the value of the first element in the provided array that satisfies the provided testing function.</p>
+            <Heading level={4} text="3.2.3 - find" />
+            <p>- <CustomText>find</CustomText> method returns the value of the first element in the provided array that satisfies the provided testing function.</p>
             <CodeDisplay language="typescript" code={`let ages = [3, 10, 18, 20];`} />
         </CustomComponent>
     );
