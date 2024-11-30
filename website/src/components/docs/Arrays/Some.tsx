@@ -7,8 +7,8 @@ import CustomText from "@/components/common/CustomText";
 const Some: FC = () => {
     return (
         <CustomComponent id="some">
-            <Heading level={2} text="some" />
-            <p><CustomText>some</CustomText> method tests whether at least one element in the array passes the test implemented by the provided function.</p>
+            <Heading level={4} text="3.2.5 - some" />
+            <p>- <CustomText>some</CustomText> method tests whether at least one element in the array passes the test implemented by the provided function.</p>
         </CustomComponent>
     );
 };

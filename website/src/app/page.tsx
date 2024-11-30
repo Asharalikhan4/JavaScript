@@ -3,7 +3,7 @@ import CustomText from "@/components/common/CustomText";
 
 export default function Home() {
   return (
-    <main className="h-screen">
+    <main className="h-[90%] flex items-center justify-center">
       <div className="h-full flex flex-col items-center justify-center gap-y-4 md:gap-y-2">
         <div className="text-2xl md:text-3xl font-Inter">Welcome to <CustomText className="italic dark:text-violet-500 font-semibold">JavaScript+TypeScript</CustomText> World.</div>
         <div className="text-2xl md:text-4xl md:font-medium font-Assistant">Here you can learn <CustomText className="italic dark:text-violet-500 font-semibold">JavaScript+TypeScript</CustomText> from scratch.</div>

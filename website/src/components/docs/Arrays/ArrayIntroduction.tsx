@@ -7,7 +7,7 @@ import CustomText from "@/components/common/CustomText";
 const ArrayIntroduction: FC = () => {
     return (
         <CustomComponent id="array-introduction">
-            <Heading level={3} text="Arrays Introduction" />
+            <Heading level={3} text="3.1 - Arrays Introduction" />
             <div className="space-y-2">
                 <p>- Objects allow you to store keyed collections of values. That’s fine.</p>
                 <p>- But quite often we find that we need an ordered collection, where we have a 1st, a 2nd, a 3rd element and so on. For example, we need that to store a list of something: users, goods, HTML elements etc.</p>
