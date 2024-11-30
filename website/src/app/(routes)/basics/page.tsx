@@ -23,7 +23,7 @@ const StrictMode = DynamicImport(() => import("@/components/docs/basics/StrictMo
 const Page: FC = () => {
     return (
         <CustomPage>
-            <Heading level={2} text="# 1 - Basics" />
+            <Heading level={2} text="#1 - Basics" />
             <HelloWorld />
             <ValuesAndVariables />
             <DataTypes />
