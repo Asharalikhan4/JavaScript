@@ -26,6 +26,7 @@ interface HeadingProps {
 interface CustomPageProps {
     children: React.ReactNode;
     className?: string;
+    id?: string;
 };
 
 interface CustomComponentProps {

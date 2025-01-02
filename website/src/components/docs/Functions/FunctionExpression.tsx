@@ -7,7 +7,7 @@ import CustomText from "@/components/common/CustomText";
 const FunctionExpression: FC = () => {
     return (
         <CustomComponent id="function-expression">
-            <Heading level={3} text="Function Expression" />
+            <Heading level={3} text="2.4 - Function Expression" />
             <CodeDisplay language="javascript" code={`const calcAge2 = function(birthYear){
     return 2037 - birthYear;
 }

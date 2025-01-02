@@ -8,7 +8,21 @@ const SwitchCase: FC = () => {
     return (
         <CustomComponent id="switch-case">
             <Heading level={3} text="1.14 - Switch Case" />
-            <CodeDisplay language="typescript" code={`const day = "monday";
+            <p>- The <CustomText>switch</CustomText> statement in JavaScript is a control structure used to execute one block of code among multiple options, based on the value of an expression. It provides a cleaner and more efficient alternative to multiple if...else if statements when checking a single value against many cases.</p>
+            <CodeDisplay language="typescript" code={`switch (expression) {
+  case value1:
+    // Code to execute if expression === value1
+    break;
+  case value2:
+    // Code to execute if expression === value2
+    break;
+  default:
+    // Code to execute if no case matches
+}
+    
+
+// Example
+const day = "monday";
 
 switch(day){
     case "sunday":

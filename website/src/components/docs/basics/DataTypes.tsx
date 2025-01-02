@@ -2,6 +2,7 @@ import { FC } from "react";
 import CustomComponent from "@/components/common/CustomComponent";
 import Heading from "@/components/common/Heading";
 import CodeDisplay from "@/components/common/CodeDisplay";
+import CustomText from "@/components/common/CustomText";
 
 const DataTypes: FC = () => {
     return (
@@ -30,10 +31,6 @@ const DataTypes: FC = () => {
                     <CodeDisplay language="typescript" code={`const notDefined = undefined;`} />
                 </li>
                 <li>
-                    Object
-                    <CodeDisplay language="typescript" code={`const person = { name: 'John Doe', age: 25 };`} />
-                </li>
-                <li>
                     Symbol
                     <CodeDisplay language="typescript" code={`const unique = Symbol('unique');`} />
                 </li>
@@ -42,7 +39,7 @@ const DataTypes: FC = () => {
                     <CodeDisplay language="typescript" code={`const bigNumber = 100n;`} />
                 </li>
             </ul>
-            <p>- JavaScript has dynamic typing means we don't have to manually define the data types of the value stored in a variable, data types are determined automatically.</p>
+            <p>- JavaScript has <CustomText>dynamic typing</CustomText> means we don't have to manually define the data types of the value stored in a variable, data types are determined automatically.</p>
         </CustomComponent>
     );
 };

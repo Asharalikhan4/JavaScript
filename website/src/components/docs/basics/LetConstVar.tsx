@@ -8,7 +8,7 @@ const LetConstVar: FC = () => {
     return (
         <CustomComponent id="let-const-var">
             <Heading level={3} text="1.6 - Let, Const, and Var" />
-            <p>Let, const, and var are used to declare variables in JavaScript.</p>
+            <p>- Let, const, and var are used to declare variables in JavaScript.</p>
             <Heading level={5} text="1.6.1 - Let" />
             <CodeDisplay language="typescript" code={`let greeting: string = 'Hello, world!';`} />
             <p>- Block-scoped: Variables declared with let are block-scoped, which means they are only available within the block (e.g., an if statement or a loop) where they are defined.</p>

@@ -127,12 +127,16 @@ const topics: Topic[] = [
         ]
     },
     {
-        title: "Functions",
+        title: "Function's",
         link: "/functions",
         subtopics: [
             {
                 title: "Function Declaration",
                 link: "/functions#function-declaration",
+            },
+            {
+                title: "Parameter In Function",
+                link: "/functions#parameter-in-function",
             },
             {
                 title: "Function Expression",
@@ -227,6 +231,10 @@ const topics: Topic[] = [
                 ]
             }
         ]
+    },
+    {
+        title: "Extras",
+        link: "/extras",
     }
 ];
 

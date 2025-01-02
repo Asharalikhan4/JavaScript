@@ -8,6 +8,7 @@ const IfElse: FC = () => {
     return (
         <CustomComponent id="if-else">
             <Heading level={3} text="1.9 - If Else" />
+            <p>- The <CustomText>if...else</CustomText> statement in JavaScript is a fundamental control structure used to execute code conditionally based on whether a specified condition evaluates to true or false.</p>
             <CodeDisplay language="javascript" code={`const age = 22;
 const isOldEnough = 18;
 

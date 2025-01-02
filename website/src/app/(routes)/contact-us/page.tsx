@@ -41,9 +41,9 @@ const Page: FC = () => {
                 <button type="submit" onClick={handleContactFormSubmit} className="p-2 bg-[#005B41] dark:bg-violet-500 text-white rounded-md dark:text-black">Submit</button>
             </form>
             <div className="flex items-center my-4">
-                <div className="flex-grow border-t border-violet-500"></div>
-                <span className="mx-2 text-violet-300">OR</span>
-                <div className="flex-grow border-t border-violet-500"></div>
+                <div className="flex-grow border-t dark:border-violet-500 text-[#005B41]"></div>
+                <span className="mx-2 dark:text-violet-300 text-[#005B41]">OR</span>
+                <div className="flex-grow border-t dark:border-violet-500 text-[#005B41]"></div>
             </div>
             <div className="text-xl font-medium">Write a mail - <a href="mailto:contactashar4@gmail.com" className="dark:text-violet-200 dark:hover:text-violet-400 underline underline-offset-4">contactashar4@gmail.com</a></div>
         </CustomPage>
