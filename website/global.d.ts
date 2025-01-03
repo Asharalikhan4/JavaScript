@@ -59,3 +59,20 @@ interface ContactFormTypes {
     email: string;
     suggestions: string;
 };
+
+interface Technologies {
+    title: string,
+    link: string
+    // subtopics?: Technologies[];
+};
+
+interface Topic {
+    title: string;
+    link: string;
+    subtopics?: Topic[];
+};
+
+interface TableOfContentsProps {
+  text: string;
+  topics: Topic[];
+};

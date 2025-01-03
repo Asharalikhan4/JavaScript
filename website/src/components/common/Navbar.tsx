@@ -1,5 +1,5 @@
 "use client";
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "@/utils/ThemeToggle";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -41,7 +41,7 @@ const Navbar: FC = () => {
             }
             {mobileMenu && (
                 <div className="md:hidden px-2 py-2 space-y-2">
-                    <Link href={"/table-of-contents"} className="block cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300" onClick={handleToggleMobileMenu}>Contents</Link>
+                    <Link href={"/technologies"} className="block cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300" onClick={handleToggleMobileMenu}>Technologies</Link>
                     <Link href={"/ide"} className="block cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300" onClick={handleToggleMobileMenu}>IDE</Link>
                     <Link href={"/contact-us"} className="block cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300" onClick={handleToggleMobileMenu}>Contact-Us</Link>
                 </div>
@@ -49,7 +49,7 @@ const Navbar: FC = () => {
             <div className="hidden md:flex justify-between items-center font-medium px-3 py-2">
                 <Link href={"/"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Home</Link>
                 <div className="flex items-center gap-x-4 px-1">
-                    <Link href={"/table-of-contents"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Contents</Link>
+                    <Link href={"/technologies"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Technologies</Link>
                     <Link href={"/ide"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">IDE</Link>
                     <Link href={"/contact-us"} className="cursor-pointer transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300">Contact-Us</Link>
                     <ThemeToggle className="transition-colors duration-200 hover:text-[#005B41] hover:dark:text-violet-300 text-2xl" />

@@ -1,17 +1,9 @@
+"use client";
 import { FC } from "react";
 import TableOfContents from "@/components/common/TableOfContents";
+import { useSearchParams } from "next/navigation";
 
-interface Topic {
-    title: string;
-    link: string;
-    subtopics?: Topic[];
-};
-
-interface TableOfContentsProps {
-    topics: Topic[];
-};
-
-const topics: Topic[] = [
+const JavaScriptTopics: Topic[] = [
     {
         title: "Basics",
         link: "/basics",
@@ -238,11 +230,73 @@ const topics: Topic[] = [
     }
 ];
 
+const TypeScriptTopics: Topic[] = [
+    {
+        title: "TypeScript",
+        link: "/functions",
+        subtopics: [
+            {
+                title: "Function Declaration",
+                link: "/functions#function-declaration",
+            },
+            {
+                title: "Parameter In Function",
+                link: "/functions#parameter-in-function",
+            },
+            {
+                title: "Function Expression",
+                link: "/functions#function-expression",
+            },
+            {
+                title: "Arrow Function (ES6)",
+                link: "/functions#arrow-function",
+            }
+        ]
+    }
+];
+
+const ReactTopics: Topic[] = [
+    {
+        title: "React Introduction",
+        link: "/react-introduction",
+        subtopics: [
+            {
+                title: "Virtual Dom",
+                link: "/virtual-dom"
+            }
+        ]
+    }
+];
+
+const NextTopics: Topic[] = [];
+
 const Page: FC = () => {
+
+    const searchParams = useSearchParams();
+    const topicName = searchParams.get("topic");
+
+    let topics: Topic[] = [];
+    switch(topicName) {
+        case("JavaScript"):
+            topics = JavaScriptTopics;
+            break;
+        case("TypeScript"):
+            topics = TypeScriptTopics;
+            break;
+        case("React"):
+            topics = ReactTopics;
+            break;
+        case("Next"):
+            topics = NextTopics;
+            break;
+        default :
+            "None";
+    };
+
     return (
-        <div>
-            <TableOfContents topics={topics} />
-        </div>
+        <>
+            <TableOfContents text="Table of Contents" topics={topics} />
+        </>
     );
 };
 
