@@ -181,6 +181,16 @@ const JavaScriptTopics: Topic[] = [
         ]
     },
     {
+        title: "Object's",
+        link: "objects",
+        subtopics: [
+            {
+                title: "Objects Introduction",
+                link: "/objects#objects-introduction"
+            }
+        ]
+    },
+    {
         title: "Async JavaScript",
         link: "/async-javascript",
         subtopics: [
