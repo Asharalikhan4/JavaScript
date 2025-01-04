@@ -11,7 +11,7 @@ const At: FC = () => {
             <p></p>
             <CodeDisplay language="typescript" code={`let fruits = ["Apple", "Orange", "Plum"];
 // same as fruits[fruits.length-1]
-alert( fruits.at(-1) ); // Plum`} />
+alert(fruits.at(-1)); // Plum`} />
         </CustomComponent>
     );
 };

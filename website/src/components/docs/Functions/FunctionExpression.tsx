@@ -8,6 +8,7 @@ const FunctionExpression: FC = () => {
     return (
         <CustomComponent id="function-expression">
             <Heading level={3} text="2.4 - Function Expression" />
+            <p>- A function expression is a way to define a function in JavaScript where the function is assigned to a variable, constant, or object property. Unlike a function declaration, a function expression does not have its own name unless explicitly defined as a named function expression.</p>
             <CodeDisplay language="javascript" code={`const calcAge2 = function(birthYear){
     return 2037 - birthYear;
 }

@@ -3,10 +3,10 @@ import CustomComponent from "@/components/common/CustomComponent";
 import Heading from "@/components/common/Heading";
 import CodeDisplay from "@/components/common/CodeDisplay";
 
-const ParamterInFunction: FC = () => {
+const ParamtersAndArguementsInFunction: FC = () => {
     return (
-        <CustomComponent id="paramter-in-function">
-            <Heading level={3} text="2.3 - Parameter's In Function" />
+        <CustomComponent id="paramters-and-arguements-in-function">
+            <Heading level={3} text="2.3 - Parameter's and Arguement's In Function" />
             <p>- Parameters are placeholders used in the function definition to represent the values that will be passed to the function when it is called.</p>
             <CodeDisplay language="javascript" code={`function greet(name) { // 'name' is a parameter
   console.log("Hello, {name}!");
@@ -24,4 +24,4 @@ greet();        // Output: Hello, Guest!`} />
     );
 };
 
-export default ParamterInFunction;
+export default ParamtersAndArguementsInFunction;

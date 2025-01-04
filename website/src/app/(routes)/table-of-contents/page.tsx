@@ -123,6 +123,10 @@ const JavaScriptTopics: Topic[] = [
         link: "/functions",
         subtopics: [
             {
+                title: "Function Introduction",
+                link: "/functions#function-introduction"
+            },
+            {
                 title: "Function Declaration",
                 link: "/functions#function-declaration",
             },

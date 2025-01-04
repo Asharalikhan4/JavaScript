@@ -6,7 +6,7 @@ import CodeDisplay from "@/components/common/CodeDisplay";
 const Filter: FC = () => {
     return (
         <CustomComponent id="filter">
-            <Heading level={4} text="3.2.2 - Filter" />
+            <Heading level={4} text="3.2.2 - filter" />
             <p>- Returns a new array containing all elements of the calling array for which the provided function condition returns true.</p>
             <CodeDisplay language="typescript" code={`let arr = [1, 2, 3, 4, 5, 6, 7];
 arr = arr.filter((num) => num > 2);  // condition is to take number only greater than 2.
