@@ -191,6 +191,10 @@ const JavaScriptTopics: Topic[] = [
         ]
     },
     {
+        title: "Closure",
+        link: "/closure"
+    },
+    {
         title: "Async JavaScript",
         link: "/async-javascript",
         subtopics: [
