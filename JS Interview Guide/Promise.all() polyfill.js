@@ -7,16 +7,35 @@ const myPromiseAll = function (taskList) {
   let completedTasks = 0;
   return new Promise((resolve, reject) => {
     taskList.forEach((promise, index) => {
-      promise.then((val) => {
-        results[index] = val;
-        completedTasks++;
-      });
-      if (completedTasks === taskList.length) {
-        reject(results);
-      }
-    })
-      .catch((error) => {
-        reject(error);
-      })
+      promise
+        .then((val) => {
+          results[index] = val;
+          completedTasks++;
+          if (completedTasks === taskList.length) {
+            resolve(results);
+          }
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
   });
 };
+
+function task(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(time);
+    }, time);
+  });
+}
+
+const taskList = [task(1000), task(5000), task(3000)];
+
+myPromiseAll(taskList)
+  .then((results) => {
+    console.log("Results", results);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
