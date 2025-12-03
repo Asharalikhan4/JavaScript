@@ -22,7 +22,8 @@ const asyncTask = function (i) {
 
 const promises = [asyncTask(3), asyncTask(1), asyncTask(7), asyncTask(2), asyncTask(5)];
 
-const executeAsyncOperationInSeries = async function (promises) {
+// Using for Loop
+const executeAsyncOperationInSeriesUsingLoop = async function (promises) {
   for (let promise of promises) {
     try {
       const result = await promise;
@@ -33,5 +34,8 @@ const executeAsyncOperationInSeries = async function (promises) {
   }
 };
 
-executeAsyncOperationInSeries(promises);
+// Recursion
+
+
+executeAsyncOperationInSeriesUsingLoop(promises);
 
