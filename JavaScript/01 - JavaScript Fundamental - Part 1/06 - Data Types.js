@@ -22,6 +22,11 @@ Symbol
 BigInt
 
 
+// Non primitive
+Map, Set
+WeakMap, WeakSet
+
+
 // Assignment
 let isIsland = true;
 console.log(typeof isIsland);
