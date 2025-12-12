@@ -1,23 +1,20 @@
 // forEach implmentation on map.
+// forEach array run for each items in the array.
 const currencies = new Map([
-    ["USD", "United State Dollar"],
-    ["EUR", "Euro"],
-    ["GBP", "Pound Streling"]
+  ["USD", "United State Dollar"],
+  ["EUR", "Euro"],
+  ["GBP", "Pound Streling"],
 ]);
 
-console.log("Using forEach on map.")
-currencies.forEach(function(value, key, map){
-    console.log(`${key} : ${value}`);
+console.log("Using forEach on map.");
+currencies.forEach(function (value, key, map) {
+  console.log(`${key} : ${value}`);
 });
 
-
-
 // forEach implementation on set.
-const currenciesUnique = new Set([
-    "USD", "GBP", "USD", "EUR", "EUR"
-]);
+const currenciesUnique = new Set(["USD", "GBP", "USD", "EUR", "EUR"]);
 
 console.log("Using forEach on Sets");
-currenciesUnique.forEach(function(value, key, map){
-    console.log(`${key} : ${value}`);
+currenciesUnique.forEach(function (value, key, map) {
+  console.log(`${key} : ${value}`);
 });

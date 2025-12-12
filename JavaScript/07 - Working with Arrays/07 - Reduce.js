@@ -8,7 +8,6 @@ currentIndex -> current index position of the iteration
 array -> the array itself.
 */
 
-
 // Aggregation - Sum of all the elements of the array or multiply all the elements of the array.
 const arr = [1, 2, 3, 4];
 const sum = arr.reduce((previousValue, currentValue) => {
@@ -16,18 +15,17 @@ const sum = arr.reduce((previousValue, currentValue) => {
 }, 0);
 console.log("Aggregation", sum);
 
-
 // Segregation - We can group a certain set of values depending on our requirements.
 const arr1 = [1.1, 1.2, 1.3, 2.2, 2.3, 2.4];
 const segregate = arr1.reduce((previousValue, currentValue) => {
   const floored = Math.floor(currentValue);
-  if(!previousValue[floored]){
+  if (!previousValue[floored]) {
     previousValue[floored] = [];
   }
   previousValue[floored].push(currentValue);
   return previousValue;
-}, {})
-console.log("Segregate", segregate)
+}, {});
+console.log("Segregate", segregate);
 
 // Run In Sequence - Let's say we have an array of functions and a value, the value has to be passed through these fuctions in a pipe, like the initial value has to be passed to the first function and then the returned value from the first function has to be passed to the next function and so on.
 
@@ -54,7 +52,6 @@ const finalValue = arr2.reduce((previousValue, currentValue) => {
 
 console.log(finalValue);
 
-
 // Similiarly if we want to run a promise in a sequence we can do the same with this
 
 const asyncTask = function (time) {
@@ -68,15 +65,15 @@ const promises = [
   asyncTask(1),
   asyncTask(7),
   asyncTask(2),
-  asyncTask(5)
+  asyncTask(5),
 ];
 
 const asyncSeriesExecuter = function (promises) {
   promises.reduce((acc, curr) => {
-    return curr.then(val => {
+    return curr.then((val) => {
       console.log(val);
-    })
-  }, Promise.resolve())
+    });
+  }, Promise.resolve());
 };
 
 asyncSeriesExecuter(promises);
