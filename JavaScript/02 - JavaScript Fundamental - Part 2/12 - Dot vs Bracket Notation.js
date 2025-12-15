@@ -18,3 +18,9 @@ console.log(obj.firstName);
 
 // Second way
 console.log(obj["lastName"]);
+
+/*
+Syntax	        Example	        Use Case
+object.key	    car.model	      When you know the key name.
+object["key"]   car["model"]	  When the key is dynamic or has spaces.
+*/

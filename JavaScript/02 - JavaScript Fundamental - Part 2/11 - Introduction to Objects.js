@@ -8,6 +8,7 @@ let a = b = c = {};
 let a = {}, b = {}, c = {};
 */
 
+// Object Literal -> it is the most basic of creating a object.
 const obj = {
   firstName: "Ashar",
   lastName: "Ali Khan",
