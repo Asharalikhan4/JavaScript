@@ -32,3 +32,14 @@ These methods help to process async task concurrency.
 3. Promise.any()
 4. Promise.race()
 */
+
+
+
+// Interview Question
+
+/*
+-> Error Handling
+1. When should you use try-catch?
+2. How to create custom errors?
+3. What happen in finally block?
+*/
