@@ -12,35 +12,34 @@ Important use case of spread operator -
 
 */
 
-const arr1 = [1,2,3];
-const arr2 = [4,5,6];
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
 // Syntax of spread operator.
 console.log(...arr1, ...arr2);
 
-
 const restaurant = {
-    name: "Classico Italino",
-    openingHours: {
-        thu: {
-            open: 12,
-            close: 22
-        },
-        fri: {
-            open: 11,
-            close: 23
-        },
-        sat: {
-            open: 0,
-            close: 24
-        }
+  name: "Classico Italino",
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
     },
-    categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-    starterMenu: ["Focaccia", "Garlic"],
-    mainMenu: ["Pizza", "Pasta", "Risotto"],
-    location: "Via Angelo, Italy"
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Garlic"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
+  location: "Via Angelo, Italy",
 };
 
 const nam = {
-    na: "Ashar",
-}
-console.log({...restaurant, ...nam});
+  na: "Ashar",
+};
+console.log({ ...restaurant, ...nam });
