@@ -6,19 +6,18 @@ const btn = document.querySelector(".btn-country");
 const countriesContainer = document.querySelector(".countries");
 
 const getCountryData = function (country) {
+  // Old school way of fetching data from API's, In this we are simply fetching the data of some countries and showing it on the frontend.
+  const request = new XMLHttpRequest();
+  request.open("GET", `https://restcountries.com/v3.1/name/${country}`);
+  request.send();
 
-    // Old school way of fetching data from API's, In this we are simply fetching the data of some countries and showing it on the frontend.
-    const request = new XMLHttpRequest();
-    request.open("GET", `https://restcountries.com/v3.1/name/${country}`);
-    request.send();
-
-    // We can get the data directly by assigning request.send() to some variable we use event listener on load that will execute on load and return a call back from where we get the data.
-    request.addEventListener("load", function () {
-        // data from the api is in the JSON format so we use fuction below to convert it into the object format.
-        // const data = JSON.parse(this.responseText);  -> we can also use this line but we need to structure the data so we use line below
-        const [data] = JSON.parse(this.responseText);
-        console.log(data.currencies);
-        const html = `
+  // We can get the data directly by assigning request.send() to some variable we use event listener on load that will execute on load and return a call back from where we get the data.
+  request.addEventListener("load", function () {
+    // data from the api is in the JSON format so we use fuction below to convert it into the object format.
+    // const data = JSON.parse(this.responseText);  -> we can also use this line but we need to structure the data so we use line below
+    const [data] = JSON.parse(this.responseText);
+    console.log(data.currencies);
+    const html = `
         <article class="country">
           <img class="country__img" src="${data?.flags?.png}" />
           <div class="country__data">
@@ -30,9 +29,9 @@ const getCountryData = function (country) {
           </div>
         </article>
     `;
-        countriesContainer.insertAdjacentHTML("beforeend", html);
-        countriesContainer.style.opacity = 1;
-    });
+    countriesContainer.insertAdjacentHTML("beforeend", html);
+    countriesContainer.style.opacity = 1;
+  });
 };
 
 getCountryData("portugal");

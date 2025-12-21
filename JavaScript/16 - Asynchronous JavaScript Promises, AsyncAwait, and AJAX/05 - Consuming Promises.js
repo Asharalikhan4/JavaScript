@@ -3,8 +3,8 @@
 const btn = document.querySelector(".btn-country");
 const countriesContainer = document.querySelector(".countries");
 
-const renderCountry = function(data, className = "") {
-    const html = `
+const renderCountry = function (data, className = "") {
+  const html = `
         <article class="country ${className}">
           <img class="country__img" src="${data?.flags?.png}" />
           <div class="country__data">
@@ -16,8 +16,8 @@ const renderCountry = function(data, className = "") {
           </div>
         </article>
     `;
-    countriesContainer.insertAdjacentHTML("beforeend", html);
-    countriesContainer.style.opacity = 1;
+  countriesContainer.insertAdjacentHTML("beforeend", html);
+  countriesContainer.style.opacity = 1;
 };
 
 // const getCountryData = function(country) {
@@ -36,13 +36,13 @@ const renderCountry = function(data, className = "") {
 //     })
 // };
 
-// we can also write the above function in 
-const getCountryData = function(country) {
-    fetch(`https://restcountries.com/v3.1/name/${country}`)
-    .then((response) => response.json())    // respinse.json() returns a promise. so we handle it with another then method.
+// we can also write the above function in
+const getCountryData = function (country) {
+  fetch(`https://restcountries.com/v3.1/name/${country}`)
+    .then((response) => response.json()) // respinse.json() returns a promise. so we handle it with another then method.
     .then((data) => renderCountry(data[0]))
-    .catch((error) => console.error(error))
-}
+    .catch((error) => console.error(error));
+};
 
 getCountryData("portugal");
 

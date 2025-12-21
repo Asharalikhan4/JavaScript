@@ -22,7 +22,7 @@ const whereAmI = async function (country) {
     // if there is an error, it will be caught here
     console.log(error);
   } finally {
-    console.log("I'll run everytimr.")
+    console.log("I'll run everytimr.");
   }
 };
 

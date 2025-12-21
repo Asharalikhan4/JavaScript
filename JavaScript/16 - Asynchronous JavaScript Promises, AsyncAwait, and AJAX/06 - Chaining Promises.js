@@ -3,8 +3,8 @@
 const btn = document.querySelector(".btn-country");
 const countriesContainer = document.querySelector(".countries");
 
-const renderCountry = function(data, className = "") {
-    const html = `
+const renderCountry = function (data, className = "") {
+  const html = `
         <article class="country ${className}">
           <img class="country__img" src="${data?.flags?.png}" />
           <div class="country__data">
@@ -16,26 +16,25 @@ const renderCountry = function(data, className = "") {
           </div>
         </article>
     `;
-    countriesContainer.insertAdjacentHTML("beforeend", html);
-    countriesContainer.style.opacity = 1;
+  countriesContainer.insertAdjacentHTML("beforeend", html);
+  countriesContainer.style.opacity = 1;
 };
 
-const getCountryData = function(country) {
+const getCountryData = function (country) {
   //  Country 1
-    fetch(`https://restcountries.com/v3.1/name/${country}`)
+  fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then((response) => response.json())
-    .then(data => {
-        renderCountry(data[0]);
-        const neighbour = data[0]?.borders[0];
-        if(!neighbour) return;
-        // Country 2
-        return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+    .then((data) => {
+      renderCountry(data[0]);
+      const neighbour = data[0]?.borders[0];
+      if (!neighbour) return;
+      // Country 2
+      return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
     })
-    .then(response => response.json())
-    .then(data => renderCountry(data, "neighbour"))
-}
+    .then((response) => response.json())
+    .then((data) => renderCountry(data, "neighbour"));
+};
 
 getCountryData("germany");
-
 
 // Don't use the nested then method, that will same as the callback hell.
