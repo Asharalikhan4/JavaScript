@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family:
+        system-ui,
+        -apple-system,
+        sans-serif;
+}
+
+#counter {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#counterValue {
+    font-size: 48px;
+    font-weight: 700;
+    min-width: 60px;
+    text-align: center;
+}
+
+button {
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #667eea;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: #5a6fdc;
+}
+
+button:active {
+    transform: scale(0.95);
+}
