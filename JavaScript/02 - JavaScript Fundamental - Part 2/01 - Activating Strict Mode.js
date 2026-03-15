@@ -1,4 +1,4 @@
-"use strict";           // this is how you activate the strict mode. add them into the start
+"use strict"; // this is how you activate the strict mode. add them into the start
 
 /*
 
@@ -25,9 +25,9 @@ In strict mode, you can't use octal literals (e.g., 0123) because they can lead 
 
 */
 
-function printMyName(){
-    "use strict";    // this is how we activate the strict mode in the function. use strict are not allowed in the function with default parameter.
-    console.lof("Ashar Ali Khan");
+function printMyName() {
+  "use strict"; // this is how we activate the strict mode in the function. use strict are not allowed in the function with default parameter.
+  console.lof("Ashar Ali Khan");
 }
 
 // the entire content of the module and classes in javascript are in strict mode.

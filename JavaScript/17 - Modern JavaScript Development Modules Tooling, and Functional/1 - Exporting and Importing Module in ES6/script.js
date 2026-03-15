@@ -1,4 +1,4 @@
-import { addToCart, totalPrice as price, tq } from "./shoppingCart.js";
+import { addToCart, totalPrice as price, tq } from "./shoppingCart.js";   // this is how we import the exported files.
 
 import add, { cart } from "./shoppingCart.js"; // Import default export
 

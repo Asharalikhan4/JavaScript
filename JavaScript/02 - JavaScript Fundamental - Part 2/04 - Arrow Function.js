@@ -2,6 +2,8 @@
 The two main features that distinguish arrow functions are:
 1. Concise Syntax: They offer shorter ways to write functions, especially for simple, single-expression functions.
 2. Lexical this: They do not create their own this context. Instead, they inherit the this value from the enclosing scope.
+3. They shouldn't be used as a method.
+4. Arrow function can't be used as a constructor cause calling then with new throws a TypeError, they also don't have access to the new.tagret keyword.
 
 const user = {
   name: "Alex",

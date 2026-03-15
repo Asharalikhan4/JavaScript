@@ -1,4 +1,4 @@
-// Event Bubbling -> in this the execution is from clicked to the top
+// Event Bubbling -> in this the execution happen is from clicked place to the top
 /*
 -> Bydefault all the events show event bubbling
 -> either you pass the third arguement as false or don't pass it.

@@ -1,7 +1,7 @@
 /* 
-Top Level Await is a feature introduced in ECMAScript 2022 (ES2022) that allows you to use the await keyword at the top level of your JavaScript module. Prior to this feature, the await keyword could only be used inside an async function.
+- Top Level Await is a feature introduced in ECMAScript 2022 (ES2022) that allows you to use the await keyword at the top level of your JavaScript module. Prior to this feature, the await keyword could only be used inside an async function.
 
-With Top Level Await, you can now use await directly in the top-level scope of your module, outside of any function. This means that you can use await to pause the execution of your module and wait for a promise to resolve before continuing.
+- With Top Level Await, you can now use await directly in the top-level scope of your module, outside of any function. This means that you can use await to pause the execution of your module and wait for a promise to resolve before continuing.
 
 This feature is particularly useful in scenarios where you want to perform asynchronous operations at the top level of your module, such as fetching data from an API or reading from a file. Previously, you would have needed to wrap your code in an async function to use await, but now you can use it directly.
 

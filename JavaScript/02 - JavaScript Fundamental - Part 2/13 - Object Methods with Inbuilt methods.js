@@ -98,3 +98,47 @@ console.log(object.foo);
 delete object.foo; // Cannot delete when sealed
 console.log(object.foo);
 // Expected output: 33
+
+
+/*
+# Property Extraction & Iteration
+
+1. Object.keys(obj): Returns an array of an object's own enumerable property names.
+2. Object.values(obj): Returns an array of an object's own enumerable property values.
+2. Object.entries(obj): Returns an array of an object's own enumerable [key, value] pairs.
+4. Object.fromEntries(iterable): The inverse of entries; transforms a list of key-value pairs into an object.
+5. Object.getOwnPropertyNames(obj): Returns all own property names (including non-enumerable ones).
+*/
+
+/*
+# Integrity & Protection
+
+1. Object.freeze(obj): The strictest level; prevents adding, removing, or modifying any properties.
+2. Object.seal(obj): Prevents adding or removing properties, but allows modifying existing ones.
+3. Object.preventExtensions(obj): Only prevents adding new properties; you can still delete or change existing ones.
+4. Checkers: Object.isFrozen(), Object.isSealed(), and Object.isExtensible() verify these states. 
+*/
+
+/*
+# Creation & Merging
+
+1. Object.assign(target, ...sources): Copies all enumerable own properties from sources to a target (shallow copy).
+2. Object.create(proto): Creates a new object with a specified prototype.
+3. Object.groupBy(items, callback): (Modern ES2024) Groups elements of an iterable into an object based on a string key.
+*/
+
+/*
+# Property Descriptors (Low-Level)
+
+1. Object.defineProperty(obj, prop, descriptor): Defines or modifies a property with specific metadata (writable, enumerable, etc.).
+2. Object.defineProperties(obj, props): Defines multiple properties at once.
+3. Object.getOwnPropertyDescriptor(obj, prop): Returns the descriptor for a specific property. 
+*/
+
+/*
+# Common prototype (Instance Method)
+
+1. toString(): Returns a string representation of the object.
+2. valueOf(): Returns the primitive value of the object.
+3. isPrototypeOf(obj): Checks if an object exists in another object's prototype chain.
+*/

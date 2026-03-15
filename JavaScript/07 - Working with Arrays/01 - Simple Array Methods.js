@@ -7,7 +7,7 @@ console.log(arr.slice(2, 4));
 console.log(arr.slice(-2));
 console.log(arr.slice(1, -2));
 
-// Splice
+// Splice - Mutate the original Array.
 console.log("Splice");
 console.log(arr.splice(2));
 console.log(arr.splice(1, 2));
@@ -50,3 +50,54 @@ console.log("splice", arr2, splice);
 // slice -> remove elements from an array
 let slice = arr2.slice(1, 2); // Copy from index 1 and last index is not inclusive
 console.log("slice", arr2, slice);
+
+
+/*
+# Method that modify the original array. ( Mutate the original array)
+
+1. push(...items)
+2. pop()
+3. shift()
+4. unshift(...items)
+5. splice(start, deleteCount, ...items)
+6. sort(compareFn)
+7. reverse()
+8. fill(value, start, end)
+9. copyWithin(target, start, end)
+*/
+
+/*
+# Accessor & Transformation Methods (Return a new array/value)
+
+1. map(callback): Returns a new array with transformed elements.
+2. filter(callback): Returns a new array of elements that pass a test.
+3. concat(...items): Merges arrays into a new one.
+4. slice(start, end): Returns a shallow copy of a portion.
+5. flat(depth): Flattens nested arrays into a new single array.
+6. flatMap(callback): Maps then flattens; useful for one-level deep transformations.
+7. reduce(callback, initial): Distills array into a single value (number, object, etc.).
+8. join(separator): Joins elements into a string.
+9. toString(): Returns a comma-separated string.
+10. toSorted(), toReversed(), toSpliced(): Modern (ES2023) non-mutating versions of the original methods.
+*/
+
+/*
+# Search and Iteration Method
+
+1. forEach(callback): Executes a function for each element; returns undefined.
+2. find(callback): Returns the first element that matches a condition.
+3. findIndex(callback): Returns the index of the first match.
+4. indexOf(item): Returns the index of a primitive value.
+5. includes(value): Returns true/false if an item exists.
+6. every(callback): Returns true if all elements pass a test.
+7. some(callback): Returns true if at least one element passes.
+*/
+
+/*
+# Static Methods (Called on Array itself)
+
+1. Array.from(iterable): Creates an array from an array-like object (e.g., NodeList).
+2. Array.isArray(obj): The standard way to verify if a variable is an array.
+3. Array.of(...items): Creates a new array with the provided arguments.
+*/
+

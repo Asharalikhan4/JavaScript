@@ -9,27 +9,34 @@ The specification requires maps to be implemented "that, on average, provide acc
 
 We also have maps method's that we can use to make our work easy.
 
-*/
+new Map() – creates the map.
+map.set(key, value) – stores the value by the key.
+map.get(key) – returns the value by the key, undefined if key doesn’t exist in map.
+map.has(key) – returns true if the key exists, false otherwise.
+map.delete(key) – removes the value by the key.
+map.clear() – removes everything from the map.
+map.size – returns the current element count.
 
+*/
 
 const map1 = new Map();
 
-map1.set('a', 1);
-map1.set('b', 2);
-map1.set('c', 3);
+map1.set("a", 1);
+map1.set("b", 2);
+map1.set("c", 3);
 
-console.log(map1.get('a'));
+console.log(map1.get("a"));
 // Expected output: 1
 
-map1.set('a', 97);
+map1.set("a", 97);
 
-console.log(map1.get('a'));
+console.log(map1.get("a"));
 // Expected output: 97
 
 console.log(map1.size);
 // Expected output: 3
 
-map1.delete('b');
+map1.delete("b");
 
 console.log(map1.size);
 // Expected output: 2
