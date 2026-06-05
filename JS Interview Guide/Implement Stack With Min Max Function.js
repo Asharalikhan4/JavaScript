@@ -1,4 +1,0 @@
-class stackWithMinMaxFunction {
-  let items = [];
-  
-};
