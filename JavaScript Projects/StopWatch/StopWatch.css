@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family:
+        system-ui,
+        -apple-system,
+        sans-serif;
+}
+
+.stopwatch {
+    background: #111;
+    color: #00ffcc;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#display {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.controls {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+button {
+    font-size: 16px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #00ffcc;
+    color: #111;
+    transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.3);
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}

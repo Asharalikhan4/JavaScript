@@ -1,1 +1,0 @@
-// This season only had theory for notes check Notes.md file.

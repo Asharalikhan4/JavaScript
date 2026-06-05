@@ -38,3 +38,12 @@ hamza.calcAge();
 console.log(ashar.__proto__);
 
 console.log(ashar.__proto__ === Person.prototype);
+
+
+// Updated
+const myUser = {
+  name: "Ashar"
+};
+
+console.log(myUser.__proto__);
+console.log(Object.getPrototypeOf(myUser))
