@@ -20,9 +20,63 @@ function createRejectPromise(time, promiseNumber) {
   })
 };
 
+let promiseArray = [createRejectPromise(10, 1), createRejectPromise(100, 2), createRejectPromise(200, 3)];
+
 try {
-  const res = await Promise.any([createRejectPromise(10, 1), createRejectPromise(100, 2), createRejectPromise(200, 3)])
-  console.log("Response: ", res);
+  const res = await Promise.any(promiseArray)
+  console.log("Response 1: ", res);
 } catch (error) {
-  console.error("Error: ", error)
+  console.error("Error 1: ", error)
+}
+
+// Promise.any Polyfill using .then().catch()
+function promiseAnyPolyfillUsingThenCatch(promiseArray) {
+  let errors = [];
+  return new Promise((resolve, reject) => {
+    promiseArray.forEach((promise, index) => {
+      promise.then((result) => {
+        resolve(result);
+      }).catch((error) => {
+        errors[index] = error;
+        if (errors.length === promiseArray.length) {
+          reject(errors);
+        }
+      })
+    })
+  })
+};
+
+promiseAnyPolyfillUsingThenCatch(promiseArray)
+  .then((res) => {
+    console.log("Response 2:", res);
+  })
+  .catch((error) => {
+    console.error("Error 2:", error);
+  })
+
+
+// Promise.any Polyfill using async/await
+function promiseAnyPolyfillUsingAsyncAwait(promiseArray) {
+  let errors = [];
+  return new Promise((resolve, reject) => {
+    promiseArray.forEach(async (promise, index) => {
+      try {
+        const result = await promise;
+        resolve(result);
+      } catch (error) {
+        errors[index] = error;
+        if(errors.length === promiseArray.length) {
+          reject(errors);
+        }
+      }
+    })
+  })
+};
+
+
+try {
+  const res = await promiseAnyPolyfillUsingAsyncAwait(promiseArray)
+  console.log("Response 3: ", res);
+} catch (error) {
+  console.error("Error 3: ", error)
 }
