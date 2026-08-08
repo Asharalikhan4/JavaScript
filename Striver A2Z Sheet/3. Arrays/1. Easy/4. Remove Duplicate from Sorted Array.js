@@ -3,6 +3,16 @@ Approach 1 -> We can use set, as set only stores the unqiue value, we push all t
 Approach 2 ->
 */
 
+let testArrApproach1 = [1, 1, 2];
+let testArrApproach2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+
+function removeDuplicatesApproach1(arr) {
+  const tempSet = new Set(arr);
+  console.log(tempSet)
+};
+
+console.log("Test Case 1 Approach 1 result", removeDuplicatesApproach1(testArrApproach1));
+
 function removeDuplicates(arr) {
   let i = 0, n = arr.length;
   for (let j = 1; j < n; j++) {

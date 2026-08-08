@@ -17,6 +17,9 @@ sample();
 sample();
 sample(); // this will be executed
 Note: You have to implement a function sampler that evaluates the above expression. There are no test cases to this. Test it yourself with different values.
+
+Related Links
+- https://www.linkedin.com/posts/prakharchauhan281098_opentowork-frontenddevelopment-javascript-share-7281324741347430400-6sx1/?utm_source=share&utm_medium=member_desktop
 */
 
 function samplingFunction(func, count, context) {
