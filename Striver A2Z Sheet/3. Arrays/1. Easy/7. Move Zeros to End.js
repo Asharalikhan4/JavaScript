@@ -1,14 +1,17 @@
 /*
-Question -> You are given an array of integers, your task is to move all the zeros in the array to the end of the array and move non-negative integers to the front by maintaining their order.
+Problem Statement -> Given an array arr[] of non-negative integers, move all the zeros to the end of the array while maintaining the relative order of the non-zero elements.
 
-Approach 1 -> 
-Approach 2 ->
+Approach 1 (Brute Force) -> Count the number of zero's in the array then create a new array push all the non-zero element in the array and push the number of zero's of the same count as calculated in the start.
+
+Approach 2 (Optimal Approach) -> We will use two pointer approach in this, keep the first pointer at the start and second pointer also start from starting, now in each iteration we will check the second pointer is equal to zero or not, if equal to zero then move forward and if not then swap current pointer value with first pointer value and increment the first pointer by one.
 */
 
 
-/*-----------------------------------------------------------Approach 1----------------------------------------------------------------------------*/
-
 function moveZerosToEndApproach1(arr) {
+  /*
+    T.C -> O(2N)
+    S.C -> O(N)
+  */
   let zeroCount = 0;
   const ans = [];
   for (let num of arr) {
@@ -28,8 +31,6 @@ function moveZerosToEndApproach1(arr) {
 const testCase1ForApproach1 = [1, 0, 2, 3, 0, 4, 0, 1]
 console.log("Test Case 1 Approach 1 Result:", moveZerosToEndApproach1(testCase1ForApproach1));
 
-/*-----------------------------------------------------------Approach 2----------------------------------------------------------------------------*/
-
 function swap(a, b) {
   let temp = a;
   a = b;
@@ -37,6 +38,10 @@ function swap(a, b) {
 };
 
 function moveZerosToEndApproach2(arr) {
+  /*
+    T.C -> O(N)
+    S.C -> O(1)
+  */
   let j = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] !== 0) {
