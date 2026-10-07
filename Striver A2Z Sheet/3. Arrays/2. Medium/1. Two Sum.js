@@ -1,5 +1,11 @@
 /*
 Problem Statement -> Two Sum : Check if a pair with given sum exists in Array
+
+Approach 1 (Brute Force Approach): Take one element from array and iterate over array and check weather there's a number that when added will give the required outcome.
+
+Approach 2 (Optimal Approach): Take a hashmap and iterate over array and keep on checking weather target (target=targetGiven - currentElement) is in hashmap or not, if it is in hashmap then return the value of it and this value and if it is not there then push the key as value and index as value in the hashmap, follow the same procedure till the end of an array.
+
+Approach 3 (Optimal Apporach without Hashmap): Sort the array and Take two pointer one from start and one from end, and check weather the value is equal to given target or not if yes then return and if no then check weather out calculated value is greater then target or less then target, if greater then then decrement the last pointer and if lesser increment the starting pointer.
 */
 
 let testCaseArr1 = [2, 6, 5, 8, 11],
@@ -7,14 +13,11 @@ let testCaseArr1 = [2, 6, 5, 8, 11],
 let testCaseTarget1 = 14,
   testCaseTarget2 = 15;
 
-/*
-- Brute Force Approach
-- Approach 1: Take one element from array and iterate over array and check weather there's a number that when added will give the required outcome.
-- TC - O(n^2)
-- SC - O(1)
-*/
-
 function twoSumApproach1(arr, target) {
+  /*
+    T.C - O(N*N)
+    S.C - O(1)
+  */
   let ans = [-1, -1];
   for (let i = 0; i < arr.length; i++) {
     let firstNum = arr[i];
@@ -37,14 +40,11 @@ console.log(
 );
 
 
-/*
-- Better Approach
-- We'll use hashmap
-- TC - O(n)
-- SC - O(n)
-*/
-
 function twoSumApproach2(arr, target) {
+  /*
+    T.C - O(N)
+    S.C - O(N)
+  */
   let map = new Map();
   for (let i = 0; i < arr.length; i++) {
     const otherHalf = target - arr[i];
@@ -67,13 +67,11 @@ console.log(
 );
 
 
-/*
-Optimal Approach
-- Sort the array
-- Now use two pointer approach.
-*/
-
 function twoSumApproach3(arr, target) {
+  /*
+    T.C - O(N + NlogN)
+    S.C - O(1)
+  */
   let numsWithIndex = arr.map((val, idx) => [val, idx]);
   numsWithIndex.sort((a, b) => a[0] - b[0]);
 
