@@ -167,7 +167,7 @@ export const MonacoRunner: React.FC<MonacoRunnerProps> = ({
         </div>
         <div className="min-h-[70px] max-h-[180px] overflow-y-auto space-y-1">
           {output.length === 0 ? (
-            <div className="text-neutral-600 italic">Click "Run Code" above to execute and view output...</div>
+            <div className="text-neutral-600 italic">Click &quot;Run Code&quot; above to execute and view output...</div>
           ) : (
             output.map((line, idx) => (
               <div

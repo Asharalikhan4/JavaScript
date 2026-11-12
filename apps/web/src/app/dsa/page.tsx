@@ -22,7 +22,7 @@ export default function DsaIndexPage() {
           Data Structures & Algorithms in JavaScript
         </h1>
         <p className="text-base text-neutral-400 leading-relaxed">
-          Striver's popular A2Z DSA sheet implemented from scratch in pure JavaScript. Compare brute-force, better, and optimal solutions with Big-O time and space complexity annotations.
+          Striver&apos;s popular A2Z DSA sheet implemented from scratch in pure JavaScript. Compare brute-force, better, and optimal solutions with Big-O time and space complexity annotations.
         </p>
       </div>
 

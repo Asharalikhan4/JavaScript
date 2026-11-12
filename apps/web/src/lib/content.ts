@@ -1,8 +1,24 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-// Locate content directory at root
-const CONTENT_DIR = path.resolve(process.cwd(), '../../content');
+// Robust content directory resolution for local & Vercel builds
+function getContentDir(): string {
+  // Priority 1: Self-contained within apps/web/src/content
+  const localSrc = path.resolve(process.cwd(), 'src/content');
+  if (fs.existsSync(localSrc)) return localSrc;
+
+  // Priority 2: Relative to monorepo root content directory
+  const relativeRoot = path.resolve(process.cwd(), '../../content');
+  if (fs.existsSync(relativeRoot)) return relativeRoot;
+
+  // Priority 3: Root execution cwd
+  const rootContent = path.resolve(process.cwd(), 'content');
+  if (fs.existsSync(rootContent)) return rootContent;
+
+  return localSrc;
+}
+
+const CONTENT_DIR = getContentDir();
 
 export interface MasterbookItem {
   id: string;

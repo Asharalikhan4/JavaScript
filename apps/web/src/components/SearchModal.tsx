@@ -150,7 +150,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, items
         <div className="max-h-[380px] overflow-y-auto p-2 space-y-1">
           {filtered.length === 0 ? (
             <div className="p-8 text-center text-sm text-neutral-500">
-              No matching questions or topics found for "{query}".
+              No matching questions or topics found for &quot;{query}&quot;.
             </div>
           ) : (
             filtered.map((item, idx) => (

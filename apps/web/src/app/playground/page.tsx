@@ -150,7 +150,7 @@ export default function PlaygroundPage() {
             JavaScript Interactive Playground
           </h1>
           <p className="text-sm text-neutral-400 mt-1">
-            Write, execute, and debug polyfills and algorithms in real time with VS Code's Monaco engine.
+            Write, execute, and debug polyfills and algorithms in real time with VS Code&apos;s Monaco engine.
           </p>
         </div>
 

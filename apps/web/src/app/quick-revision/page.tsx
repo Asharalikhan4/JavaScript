@@ -22,7 +22,7 @@ export default function QuickRevisionIndexPage() {
           Quick Revision Notes
         </h1>
         <p className="text-base text-neutral-400 leading-relaxed">
-          Concise, high-impact reference sheets for quick review before your interview: Promises, Closures, "this" scoping, Set & Map, and React performance hooks.
+          Concise, high-impact reference sheets for quick review before your interview: Promises, Closures, &quot;this&quot; scoping, Set & Map, and React performance hooks.
         </p>
       </div>
 

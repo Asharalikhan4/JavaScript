@@ -3,11 +3,12 @@ node_modules/
 .pnp
 .pnp.js
 
-# Production build artifacts
+# Build outputs & cache
 .next/
 out/
 build/
 dist/
+*.tsbuildinfo
 
 # OS and IDE files
 .DS_Store

@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const ROOT_DIR = process.cwd();
 const CONTENT_DIR = path.join(ROOT_DIR, 'content');
+const WEB_CONTENT_DIR = path.join(ROOT_DIR, 'apps', 'web', 'src', 'content');
 const GITHUB_REPO_URL = 'https://github.com/Asharalikhan4/JavaScript/blob/master';
 
 function ensureDir(dir) {
@@ -12,6 +13,13 @@ function ensureDir(dir) {
 }
 
 ensureDir(CONTENT_DIR);
+ensureDir(WEB_CONTENT_DIR);
+
+function writeJsonData(filename, data) {
+  const jsonStr = JSON.stringify(data, null, 2);
+  fs.writeFileSync(path.join(CONTENT_DIR, filename), jsonStr, 'utf8');
+  fs.writeFileSync(path.join(WEB_CONTENT_DIR, filename), jsonStr, 'utf8');
+}
 
 function slugify(text) {
   return text
@@ -77,11 +85,7 @@ function ingestMasterbook() {
   }
 
   masterbookItems.sort((a, b) => a.order - b.order);
-  fs.writeFileSync(
-    path.join(CONTENT_DIR, 'masterbook.json'),
-    JSON.stringify(masterbookItems, null, 2),
-    'utf8'
-  );
+  writeJsonData('masterbook.json', masterbookItems);
   console.log(`[Masterbook] Synced ${masterbookItems.length} chapters.`);
   return masterbookItems;
 }
@@ -121,11 +125,7 @@ function ingestQuickRevision() {
   }
 
   revisionItems.sort((a, b) => a.title.localeCompare(b.title));
-  fs.writeFileSync(
-    path.join(CONTENT_DIR, 'quick-revision.json'),
-    JSON.stringify(revisionItems, null, 2),
-    'utf8'
-  );
+  writeJsonData('quick-revision.json', revisionItems);
   console.log(`[QuickRevision] Synced ${revisionItems.length} topics.`);
   return revisionItems;
 }
@@ -240,11 +240,7 @@ function ingestProblems() {
   }
 
   uniqueProblems.sort((a, b) => a.title.localeCompare(b.title));
-  fs.writeFileSync(
-    path.join(CONTENT_DIR, 'problems.json'),
-    JSON.stringify(uniqueProblems, null, 2),
-    'utf8'
-  );
+  writeJsonData('problems.json', uniqueProblems);
   console.log(`[Problems] Synced ${uniqueProblems.length} machine coding and interview problems.`);
   return uniqueProblems;
 }
@@ -324,11 +320,7 @@ function ingestDsa() {
   }
 
   dsaItems.sort((a, b) => a.category.localeCompare(b.category) || a.title.localeCompare(b.title));
-  fs.writeFileSync(
-    path.join(CONTENT_DIR, 'dsa.json'),
-    JSON.stringify(dsaItems, null, 2),
-    'utf8'
-  );
+  writeJsonData('dsa.json', dsaItems);
   console.log(`[DSA] Synced ${dsaItems.length} DSA problems and implementations.`);
   return dsaItems;
 }
